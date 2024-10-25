@@ -9,6 +9,11 @@ li {
   list-style: none;
 }
 
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
 .nav-links {
   display: flex;
   gap: 20px;
@@ -16,7 +21,7 @@ li {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
@@ -27,6 +32,6 @@ li {
 
 .nav-settings a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 20px;
 }
