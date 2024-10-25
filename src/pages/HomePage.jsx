@@ -21,7 +21,10 @@ function HomePage() {
       </div>
 
       <Technologies />
+
+      <div>Proyectos</div>
     </div>
+    //TODO: create paths for the routes
   );
 }
 
