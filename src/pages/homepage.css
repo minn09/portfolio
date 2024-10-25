@@ -11,8 +11,12 @@
 }
 
 .image{
+
   width: 200px;
   height: 100px;
+  width: 90px;
+  height: 90px;
+
 }
 
 .images-container {
@@ -34,6 +38,7 @@ button {
   background-color: white;
   color: black;
   padding: 10px 30px;
+  padding: 10px;
   border: none;
   border-radius: 90px;
   cursor: pointer;
