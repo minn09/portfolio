@@ -1,11 +1,14 @@
-import Card from "./Card";
+import Card from "../Card/Card";
+import "./ProjectCard.css";
 const ProjectCard = () => {
   return (
     <div>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <div className="container">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 };

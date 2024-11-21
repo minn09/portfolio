@@ -13,7 +13,7 @@ function HomePage() {
       <div className="contact-container">
         <div className="button-container">
           <button className="button">
-            <MdContactMail size={30} color="white" className="icon" />
+            <MdContactMail size={30} color="white" className="icon-homepage" />
             <span>Resume</span>
           </button>
 
@@ -25,12 +25,12 @@ function HomePage() {
         <div className="images-container">
           <img
             className="image"
-            src="./assets/github.png"
+            src="./assets/images/github.png"
             alt="Github Avatar"
           />
           <img
             className="image"
-            src="./assets/linkedin.png"
+            src="./assets/images/linkedin.png"
             alt="Linkedin Avatar"
           />
         </div>
