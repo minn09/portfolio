@@ -1,0 +1,56 @@
+.footer {
+  background-color: #8b472a; /* Fondo marrón oscuro */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.email-button {
+  display: flex;
+  align-items: center;
+  background-color: #d3a4e7; /* Color de fondo púrpura claro */
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.email-button .icon {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d3a4e7;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #c089db;
+}
+
+.copy-button:active {
+  background-color: #b27cc4; /* Color más oscuro al presionar */
+}
+
+.icon {
+  font-size: 1.2rem;
+}

@@ -1,7 +1,8 @@
-import NavBar from "./components/NavBar.jsx";
-import ProjectCard from "./components/ProjectCard.jsx";
+import NavBar from "./components/Navbar/NavBar.jsx";
+import ProjectCard from "./components/ProjectCard/ProjectCard.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import Technologies from "./components/Technologies.jsx";
+import Technologies from "./components/Technologies/Technologies.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 function App() {
   return (
     <>
@@ -9,7 +10,7 @@ function App() {
       <HomePage />
       <ProjectCard />
       <Technologies />
-      {/* Footer */}
+      <Footer />
     </>
   );
 }
