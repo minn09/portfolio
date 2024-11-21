@@ -6,9 +6,9 @@ function HomePage() {
     <div className="container">
       <h1 className="name">Hola, soy Jonathan</h1>
       <h2 className="subtitle">
-        Soy apasionado estudiante de ingeniería de software especializado en
-        Desarrollo Web en busca de oportunidades para contribuir y crecer en el
-        mundo de la tecnología.
+        Soy desarrollador de software enfocado en el desarrollo web frontend,
+        estoy en busca de oportunidades para contribuir y crecer en el mundo de
+        la tecnología
       </h2>
 
       <div className="images-container">

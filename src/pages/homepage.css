@@ -10,23 +10,14 @@
   font-weight: 100;
 }
 
-.image{
-
-  width: 200px;
-  height: 100px;
-  width: 90px;
-  height: 90px;
-
-}
-
 .images-container {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 .images-container img{
-  width: 100px;
-  height: 100px;
+  width: 62px;
+  height: 60px;
 }
 .buttons-container {
   display: flex;
@@ -38,11 +29,10 @@ button {
   background-color: white;
   color: black;
   padding: 10px 30px;
-  padding: 10px;
   border: none;
   border-radius: 90px;
   cursor: pointer;
   width: 200px;
-  height: 30px;
-  font-family: 'Courier Prime';
+  height: 50px;
+  
 }
