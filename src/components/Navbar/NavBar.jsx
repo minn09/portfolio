@@ -16,14 +16,18 @@ function NavBar() {
       <ul className="nav-settings">
         <li>
           <a href="/idioma">
-            <img className="icon" src="./assets/blanco-negro.png" alt="" />
+            <img
+              className="icon"
+              src="./assets/images/blanco-negro.png"
+              alt=""
+            />
           </a>
         </li>
         <li>
           <a href="/modo">
             <img
               className="icon"
-              src="./assets/icons8-traductor-google-60.png"
+              src="./assets/images/icons8-traductor-google-60.png"
               alt=""
             />
           </a>

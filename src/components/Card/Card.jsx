@@ -11,11 +11,7 @@ const Card = () => {
       <div className="card-content">
         {/* Imagen del proyecto */}
         <div className="image-container">
-          <img
-            src="./icons/react.png"
-            alt="Project Logo"
-            className="card-image"
-          />
+          <img src="logo.png" alt="Project Logo" className="card-image" />
         </div>
 
         {/* Información del proyecto */}
