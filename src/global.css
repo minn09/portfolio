@@ -3,4 +3,8 @@ body {
   background-color: #A3784E;
   background-color: #8b472a;
   color: white;
+
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto;    /* Centrar horizontalmente */
+  padding: 0 16px;   /* Espaciado interno opcional */
 }

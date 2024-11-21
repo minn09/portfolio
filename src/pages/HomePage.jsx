@@ -1,6 +1,6 @@
 import "../global.css";
 import "./homepage.css";
-import Technologies from "../components/Technologies";
+import { MdEmail, MdContactMail } from "react-icons/md"; // Icono de Material Design
 function HomePage() {
   return (
     <div className="container">
@@ -10,22 +10,31 @@ function HomePage() {
         estoy en busca de oportunidades para contribuir y crecer en el mundo de
         la tecnología
       </h2>
+      <div className="contact-container">
+        <div className="button-container">
+          <button className="button">
+            <MdContactMail size={30} color="white" className="icon" />
+            <span>Resume</span>
+          </button>
 
-      <div className="images-container">
-        <img className="image" src="./assets/github.png" alt="Github Avatar" />
-        <img
-          className="image"
-          src="./assets/linkedin.png"
-          alt="Linkedin Avatar"
-        />
+          <button className="button">
+            <MdEmail size={30} color="white" className="icon" />
+            <span>Email</span>
+          </button>
+        </div>
+        <div className="images-container">
+          <img
+            className="image"
+            src="./assets/github.png"
+            alt="Github Avatar"
+          />
+          <img
+            className="image"
+            src="./assets/linkedin.png"
+            alt="Linkedin Avatar"
+          />
+        </div>
       </div>
-
-      <div className="buttons-container">
-        <button>Curriculum vitae</button>
-        <button>Contactame</button>
-      </div>
-
-      <Technologies />
     </div>
   );
 }

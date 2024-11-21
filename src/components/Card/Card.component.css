@@ -1,0 +1,90 @@
+.card-container {
+  background-color: #8B472A; /* Fondo marrón oscuro */
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-image {
+  width: 350px;
+  height: 225px;
+  object-fit: contain;
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.info-container {
+  flex: 1;
+  color: white;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card-technologies {
+  display: flex; /* Alinea los iconos horizontalmente */
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: nowrap; /* Evita que los iconos se envuelvan a la siguiente línea */
+  gap: 10px;
+
+}
+
+.card-container:hover {
+  transition: transform 0.3s ease-in-out;
+  background-color: #9b5639;
+}
+
+.card-icon {
+  width: 2rem; /* Tamaño adecuado para las imágenes */
+  height: 2rem; /* Definir el tamaño */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button-code {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.button-demo {
+  background-color: #8E44AD;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}
