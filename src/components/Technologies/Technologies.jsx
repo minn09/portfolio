@@ -6,23 +6,23 @@ function Technologies() {
       <h2>Tecnologías</h2>
       <div className="technologies-container">
         <div className="technology">
-          <img src="./assets/html.png" alt="HTML" />
+          <img src="/assets/svg/html.svg" alt="HTML" />
           <p>HTML</p>
         </div>
         <div className="technology">
-          <img src="./assets/css.svg" alt="CSS" />
+          <img src="./assets/svg/css.svg" alt="CSS" />
           <p>CSS</p>
         </div>
         <div className="technology">
-          <img src="./assets/javascript.png" alt="JavaScript" />
+          <img src="./assets/svg/js.svg" alt="JavaScript" />
           <p>JavaScript</p>
         </div>
         <div className="technology">
-          <img src="./assets/react.png" alt="React" />
+          <img src="./assets/svg/react.svg" alt="React" />
           <p>React</p>
         </div>
         <div className="technology">
-          <img src="./assets/python.png" alt="Python" />
+          <img src="./assets/svg/python.svg" alt="Python" />
           <p>Python</p>
         </div>
       </div>

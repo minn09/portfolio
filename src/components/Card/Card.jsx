@@ -1,8 +1,8 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import ReactLogo from "../../assets/svg/react.svg";
-import PythonLogo from "../../assets/svg/python.svg";
-import TailwindLogo from "../../assets/svg/tailwind.svg";
-import TypescriptLogo from "../../assets/svg/typescript.svg";
+import ReactLogo from "/assets/svg/react.svg";
+import PythonLogo from "/assets/svg/python.svg";
+import TailwindLogo from "/assets/svg/tailwind.svg";
+import TypescriptLogo from "/assets/svg/typescript.svg";
 import "./Card.component.css"; // Asegúrate de importar el archivo CSS
 
 const Card = () => {
@@ -11,7 +11,11 @@ const Card = () => {
       <div className="card-content">
         {/* Imagen del proyecto */}
         <div className="image-container">
-          <img src="logo.png" alt="Project Logo" className="card-image" />
+          <img
+            src="/assets/images/github.png"
+            alt="Project Logo"
+            className="card-image"
+          />
         </div>
 
         {/* Información del proyecto */}

@@ -25,7 +25,7 @@ function HomePage() {
         <div className="images-container">
           <img
             className="image"
-            src="./assets/images/github.png"
+            src="/assets/images/github.png"
             alt="Github Avatar"
           />
           <img
