@@ -46,10 +46,10 @@
 
 }
 
-.card-container:hover {
+/* .card-container:hover {
   transition: transform 0.3s ease-in-out;
   background-color: #9b5639;
-}
+} */
 
 .card-icon {
   width: 2rem; /* Tamaño adecuado para las imágenes */
