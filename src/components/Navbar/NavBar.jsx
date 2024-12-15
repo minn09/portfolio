@@ -4,7 +4,9 @@ function NavBar() {
     <nav>
       <ul className="nav-links">
         <li>
-          <a href="/">Inicio</a>
+          <a href="/" aria-label="Home">
+            Inicio
+          </a>
         </li>
         <li>
           <a href="/projects">Proyectos</a>
@@ -15,7 +17,7 @@ function NavBar() {
       </ul>
       <ul className="nav-settings">
         <li>
-          <a href="/idioma">
+          <a href="/idioma" aria-label="Language">
             <img
               className="icon"
               src="./assets/images/blanco-negro.png"
@@ -24,7 +26,7 @@ function NavBar() {
           </a>
         </li>
         <li>
-          <a href="/modo">
+          <a href="/modo" aria-label="Mode">
             <img
               className="icon"
               src="./assets/images/icons8-traductor-google-60.png"
