@@ -14,17 +14,19 @@
 .email-button {
   display: flex;
   align-items: center;
-  background-color: #d3a4e7;
+  background-color: #B39DDB;
   color: white;
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  gap: 5px;
 }
 
 .email-button .icon {
-  margin-right: 10px; /* Espacio entre el icono y el texto */
+  width: 30px;
+  height: 30px;
 }
 
 
@@ -50,13 +52,11 @@
   background-color: #b27cc4; /* Color más oscuro al presionar */
 }
 
-.icon {
-  font-size: 1.2rem;
+.copy-button .icon {
+  width: 30px;
+  height: 30px;
 }
-
 span {
   color: black;
-  
   font-family: 'Albert Sans';
-
 }
