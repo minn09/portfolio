@@ -12,29 +12,23 @@
 .card-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
 .card-image {
-  width: 350px;
-  height: 225px;
+  width: 200;
+  height: 200px;
   object-fit: contain;
   border: 1px solid rgb(221, 221, 221);
 }
 
-.info-container {
-  flex: 1;
-  color: white;
-}
-
 .title {
   font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
 .description {
   font-size: 1rem;
-  margin-bottom: 20px;
 }
 
 .card-technologies {
@@ -45,11 +39,6 @@
   gap: 10px;
 
 }
-
-/* .card-container:hover {
-  transition: transform 0.3s ease-in-out;
-  background-color: #9b5639;
-} */
 
 .card-icon {
   width: 2rem; /* Tamaño adecuado para las imágenes */

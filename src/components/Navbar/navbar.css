@@ -1,8 +1,11 @@
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+}
+
+ul{
+  padding-inline-start: 0;
 }
 
 li {
@@ -17,6 +20,7 @@ li {
 .nav-links {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-links a {
@@ -28,6 +32,8 @@ li {
 .nav-settings {
   display: flex;
   gap: 20px;
+  align-items: center;
+
 }
 
 .nav-settings a {

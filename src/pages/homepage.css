@@ -1,8 +1,6 @@
 .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
 .subtitle{
@@ -10,20 +8,10 @@
   font-weight: 300;
 }
 
-.contact-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.images-container{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
 .button-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
@@ -32,18 +20,15 @@
   margin-right: 10px;
 }
 
-.image{
-  width: 90px;
-  height: 90px;
-}
 .button {
   display: flex;
   align-items: center;
   background-color: #B39DDB;
-  color: black;
+  color: white;
   padding: 10px 30px;
   border-radius: 90px;
   border: none;
   cursor: pointer;
   font-size: large;
+  gap: 5px;
 }

@@ -1,6 +1,6 @@
 import "../global.css";
 import "./homepage.css";
-import { MdEmail, MdContactMail } from "react-icons/md"; // Icono de Material Design
+import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 function HomePage() {
   return (
     <div className="container">
@@ -10,30 +10,22 @@ function HomePage() {
         estoy en busca de oportunidades para contribuir y crecer en el mundo de
         la tecnología
       </h2>
-      <div className="contact-container">
-        <div className="button-container">
-          <button className="button">
-            <MdContactMail size={30} color="white" className="icon-homepage" />
-            <span>Resume</span>
-          </button>
 
-          <button className="button">
-            <MdEmail size={30} color="white" className="icon" />
-            <span>Email</span>
-          </button>
-        </div>
-        <div className="images-container">
-          <img
-            className="image"
-            src="/assets/images/github.png"
-            alt="Github Avatar"
-          />
-          <img
-            className="image"
-            src="./assets/images/linkedin.png"
-            alt="Linkedin Avatar"
-          />
-        </div>
+      <div className="button-container">
+        <button className="button">
+          <AiOutlineMail size={30} color="white" className="icon" />
+          <span>Email</span>
+        </button>
+
+        <button className="button">
+          <AiFillGithub size={30} color="white" className="icon" />
+          <span>Github</span>
+        </button>
+
+        <button className="button">
+          <AiFillLinkedin size={30} color="white" className="icon" />
+          <span>Linkedin</span>
+        </button>
       </div>
     </div>
   );
