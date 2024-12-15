@@ -2,7 +2,7 @@ import "./technologies.css";
 
 function Technologies() {
   return (
-    <div className="technologies">
+    <article className="technologies">
       <h2>Tecnologías</h2>
       <div className="technologies-container">
         <div className="technology">
@@ -26,7 +26,7 @@ function Technologies() {
           <p>Python</p>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

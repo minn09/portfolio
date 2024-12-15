@@ -1,4 +1,5 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import { AiFillGithub } from "react-icons/ai";
 import ReactLogo from "/assets/svg/react.svg";
 import PythonLogo from "/assets/svg/python.svg";
 import TailwindLogo from "/assets/svg/tailwind.svg";
@@ -44,14 +45,14 @@ const Card = () => {
               target="_blank"
               className="button-code"
             >
-              <FaGithub className="button-icon" /> Code
+              <AiFillGithub size={30} className="button-icon" /> Code
             </a>
             <a
               href="https://example.com"
               target="_blank"
               className="button-demo"
             >
-              <FaExternalLinkAlt className="button-icon" /> Demo
+              <HiOutlineExternalLink size={30} className="button-icon" /> Demo
             </a>
           </div>
         </div>

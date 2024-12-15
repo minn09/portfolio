@@ -11,20 +11,26 @@
   gap: 10px;
 }
 
+.footer-content span {
+  color: white;
+  font-family: 'Albert Sans';
+}
 .email-button {
   display: flex;
   align-items: center;
-  background-color: #d3a4e7;
+  background-color: #9166c1;
   color: white;
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  gap: 5px;
 }
 
 .email-button .icon {
-  margin-right: 10px; /* Espacio entre el icono y el texto */
+  width: 30px;
+  height: 30px;
 }
 
 
@@ -32,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #B39DDB;
+  background-color: #9166c1;
   color: white;
   border: none;
   border-radius: 12px;
@@ -43,20 +49,14 @@
 }
 
 .copy-button:hover {
-  background-color: #c089db;
+  background-color: #8054ad;
 }
 
 .copy-button:active {
-  background-color: #b27cc4; /* Color más oscuro al presionar */
+  background-color: #6b4691; /* Color más oscuro al presionar */
 }
 
-.icon {
-  font-size: 1.2rem;
-}
-
-span {
-  color: black;
-  
-  font-family: 'Albert Sans';
-
+.copy-button .icon {
+  width: 30px;
+  height: 30px;
 }
