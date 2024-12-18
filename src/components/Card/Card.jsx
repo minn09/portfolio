@@ -21,9 +21,10 @@ const Card = () => {
 
         {/* Información del proyecto */}
         <div className="info-container">
-          <h2 className="title">Proyecto 1:</h2>
+          <h2 className="title">Demo Proyect:</h2>
           <p className="description">
-            Este proyecto se realizó haciendo unas cosas hechas.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
+            tempore rerum ipsa aliquid.
           </p>
 
           {/* Tecnologías */}
