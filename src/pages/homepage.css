@@ -23,7 +23,7 @@
   justify-content: center;
   background-color: white;
   border-radius: 12px;
-  border: none;
+  border: 2px solid white;
   cursor: pointer;
   font-size: large;
   gap: 0.1rem;
@@ -31,6 +31,17 @@
   height: 3rem;
 }
 
+.button:hover {
+  background-color: #A3784E;
+  border: 2px solid #A3784E;
+}
+
 .button .icon {
-color: #1f1f1f;
+color: black;
+}
+
+.button span {
+  color: black;
+  font-family: 'Albert Sans';
+  font-weight: 500;
 }
