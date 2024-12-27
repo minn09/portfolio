@@ -1,6 +1,11 @@
-import "../global.css";
 import "./homepage.css";
-import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import "../global.css";
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineMail,
+  AiTwotoneContainer,
+} from "react-icons/ai";
 function HomePage() {
   return (
     <header className="container">
@@ -12,20 +17,27 @@ function HomePage() {
       </h2>
 
       <article className="button-container">
-        <button className="button">
-          <AiOutlineMail size={30} className="icon" />
-          <span>Email</span>
-        </button>
+        <div className="contact">
+          <button className="button">
+            <AiTwotoneContainer className="button-icon" />
+            <span className="button-text">Resume</span>
+          </button>
+          <button className="button">
+            <AiOutlineMail className="button-icon" />
+            <span className="button-text">Email</span>
+          </button>
+        </div>
+        <div className="social">
+          <button className="button">
+            <AiFillGithub className="button-icon" />
+            <span className="button-text">Github</span>
+          </button>
 
-        <button className="button">
-          <AiFillGithub size={30} className="icon" />
-          <span>Github</span>
-        </button>
-
-        <button className="button">
-          <AiFillLinkedin size={30} className="icon" />
-          <span>Linkedin</span>
-        </button>
+          <button className="button">
+            <AiFillLinkedin className="button-icon" />
+            <span className="button-text">Linkedin</span>
+          </button>
+        </div>
       </article>
     </header>
   );

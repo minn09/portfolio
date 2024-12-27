@@ -1,39 +1,26 @@
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
-
-ul{
-  padding-inline-start: 0;
+.nav-container-buttons{
+  display: flex;
+  flex-direction: row;
 }
 
-li {
-  list-style: none;
+.nav-buttons{
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 20px; /*TODO*/
 }
 
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .icon {
-  width: 30px;
-  height: 30px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
+  width: 20px;
+  height: 20px;
   color: white;
-  font-size: 20px;
-}
-
-
-.nav-settings {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-
 }
