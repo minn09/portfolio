@@ -4,6 +4,13 @@
   align-items: center;
 }
 
+.technology-tittle{
+  color: white;
+}
+.technology-text{
+  color: white;
+}
+
 .technologies-container {
   display: flex;
   justify-content: center;

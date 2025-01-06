@@ -55,8 +55,8 @@
 }
 
 .button-code {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -67,7 +67,7 @@
 }
 
 .button-demo {
-  background-color: #6E429F;
+  background-color: #9a77b4;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
