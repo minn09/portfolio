@@ -13,7 +13,7 @@ const Card = () => {
         {/* Imagen del proyecto */}
         <div className="image-container">
           <img
-            src="/assets/images/github.png"
+            src="/assets/images/portfolio.png"
             alt="Project Logo"
             className="card-image"
           />
@@ -21,7 +21,7 @@ const Card = () => {
 
         {/* Información del proyecto */}
         <div className="info-container">
-          <h2 className="title">Demo Proyect:</h2>
+          <h2 className="title">Demo Proyect</h2>
           <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
             tempore rerum ipsa aliquid.
@@ -46,7 +46,7 @@ const Card = () => {
               target="_blank"
               className="button-code"
             >
-              <AiFillGithub size={30} className="button-icon" /> Code
+              <AiFillGithub size={30} className="button-icon-github" /> Code
             </a>
             <a
               href="https://example.com"

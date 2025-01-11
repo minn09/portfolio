@@ -1,57 +1,69 @@
+h2,
+p {
+  margin: 5px;
+}
+
 .card-container {
   display: flex;
-  padding: 20px;
   justify-content: center;
   align-items: center;
-  background-color: #8B472A; /* Fondo marrón oscuro */
-  border-radius: 12px;
+  background-color: #8b472a;
 }
 
 .card-content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  gap: 15px;
-  width: 250px;
-  height: 250px;
-  
+  gap: 10px;
+  background-color: #8b472a;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
 }
 
+.image-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+}
 .card-image {
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
-  border: 1px solid white;
-  width: 300px;
-  height: 300px;
 }
 
-.title {
-  color: white;
-  font-size: 1.5rem;
+.info-container {
+  padding: 10px;
 }
 
+.title,
 .description {
-  font-size: 1rem;
-  color: #dcdcdc;
+  color: white;
 }
 
 .card-technologies {
-  display: flex; /* Alinea los iconos horizontalmente */
+  display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: nowrap; /* Evita que los iconos se envuelvan a la siguiente línea */
+  margin-bottom: 8px;
+  flex-wrap: wrap;
   gap: 10px;
-
 }
 
 .card-icon {
-  width: 2rem; /* Tamaño adecuado para las imágenes */
-  height: 2rem; /* Definir el tamaño */
+  width: 2rem;
+  height: 2rem;
 }
 
 .buttons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .button-code {
@@ -80,4 +92,20 @@
 
 .button-icon {
   font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-image {
+    height: 200px;
+    object-fit: cover;
+  }
 }

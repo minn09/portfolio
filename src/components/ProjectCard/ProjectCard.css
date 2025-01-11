@@ -1,6 +1,19 @@
-.container {
+.projectCard-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+}
+
+.projectCard-container > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .projectCard-container > div {
+    gap: 100px;
+  }
 }
