@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "tagline": "Desarrollador Frontend",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario."
+  },
+  "experience": {
+    "title": "Experiencia"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewCode": "Ver Código",
+    "live": "Ver"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "or": "o encuéntrame en"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados"
+  }
+}

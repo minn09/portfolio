@@ -1,0 +1,48 @@
+---
+import { personalInfo } from "@/data/personal"
+import { getTranslations, type Locale } from "@/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="hero" class="min-h-screen flex items-center justify-center pt-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="text-sm text-muted-foreground mb-4">
+      {t.hero.greeting}
+    </p>
+    
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+      {personalInfo.fullName}
+    </h1>
+    
+    <p class="text-xl text-muted-foreground mb-8">
+      {locale === "en" 
+        ? "Software Developer specialized in React" 
+        : "Desarrollador de Software especializado en React"}
+    </p>
+
+    <p class="text-muted-foreground max-w-xl mx-auto mb-8">
+      {personalInfo.bio}
+    </p>
+
+    <div class="flex items-center justify-center gap-4">
+      <a
+        href="#projects"
+        class="px-6 py-3 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition-opacity"
+      >
+        {t.hero.viewProjects}
+      </a>
+      <a
+        href="#contact"
+        class="px-6 py-3 border border-border rounded-md font-medium hover:bg-accent transition-colors"
+      >
+        {t.hero.contactMe}
+      </a>
+    </div>
+  </div>
+</section>

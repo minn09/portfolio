@@ -1,0 +1,92 @@
+---
+import { personalInfo } from "@/data/personal"
+import { getTranslations, type Locale } from "@/i18n"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="contact" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold mb-8 text-center">{t.contact.title}</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <p class="text-muted-foreground mb-8">
+          {locale === "en" 
+            ? "I'm currently available for new opportunities. Feel free to reach out!"
+            : "Actualmente estoy disponible para nuevas oportunidades. ¡No dudes en contactarme!"}
+        </p>
+        
+        <div class="space-y-4">
+          <a
+            href={`mailto:${personalInfo.email}`}
+            class="block text-foreground hover:text-muted-foreground transition-colors"
+          >
+            {personalInfo.email}
+          </a>
+          
+          <p class="text-sm text-muted-foreground">
+            {t.contact.or}
+          </p>
+          
+          <div class="flex gap-4">
+            <a
+              href={personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <Card>
+        <CardContent className="p-6">
+          <form
+            class="space-y-4"
+            action={`mailto:${personalInfo.email}`}
+            method="post"
+            enctype="text/plain"
+          >
+            <div>
+              <label for="email" class="text-sm font-medium mb-2 block">
+                {t.contact.email}
+              </label>
+              <Input type="email" id="email" name="email" required />
+            </div>
+            
+            <div>
+              <label for="message" class="text-sm font-medium mb-2 block">
+                {t.contact.message}
+              </label>
+              <Textarea id="message" name="message" rows={5} required />
+            </div>
+            
+            <Button type="submit" className="w-full">
+              {t.contact.send}
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>

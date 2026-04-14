@@ -1,15 +1,29 @@
 ---
 import "@/styles/global.css"
+import { defaultLocale } from "@/i18n"
+import Navbar from "@/components/layout/navbar.astro"
+import Footer from "@/components/layout/footer.astro"
+
+interface Props {
+  title?: string
+  locale?: "en" | "es"
+}
+
+const { title = "Jonathan Huertas", locale = defaultLocale } = Astro.props
 ---
 
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro App</title>
+    <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="min-h-screen bg-background antialiased">
+    <Navbar locale={locale} />
+    <main>
+      <slot />
+    </main>
+    <Footer locale={locale} />
   </body>
 </html>

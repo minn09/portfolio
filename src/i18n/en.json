@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "tagline": "Frontend Developer",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development."
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewCode": "View Code",
+    "live": "Live"
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "or": "or reach me on"
+  },
+  "footer": {
+    "copyright": "All rights reserved"
+  }
+}

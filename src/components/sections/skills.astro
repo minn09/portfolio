@@ -1,0 +1,65 @@
+---
+import { skills } from "@/data/skills"
+import { getTranslations, type Locale } from "@/i18n"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="skills" class="py-24 bg-muted/30">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold mb-8">{t.skills.title}</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">{t.skills.frontend}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            {skills.frontend.map((skill) => (
+              <span class="text-sm px-3 py-1 bg-secondary rounded-full text-secondary-foreground">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+      
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">{t.skills.backend}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            {skills.backend.map((skill) => (
+              <span class="text-sm px-3 py-1 bg-secondary rounded-full text-secondary-foreground">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+      
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">{t.skills.tools}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="flex flex-wrap gap-2">
+            {skills.tools.map((skill) => (
+              <span class="text-sm px-3 py-1 bg-secondary rounded-full text-secondary-foreground">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>

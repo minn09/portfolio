@@ -1,0 +1,47 @@
+---
+import { experience } from "@/data/experience"
+import { getTranslations, type Locale } from "@/i18n"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="experience" class="py-24 bg-muted/30">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold mb-8">{t.experience.title}</h2>
+    
+    <div class="space-y-6">
+      {
+        experience.map((exp) => (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg font-medium">
+                {exp.role}
+              </CardTitle>
+              <p class="text-sm text-muted-foreground">
+                {exp.company} • {exp.location}
+              </p>
+              <p class="text-xs text-muted-foreground">
+                {exp.period}
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul class="space-y-2">
+                {exp.description.map((item) => (
+                  <li class="text-sm text-muted-foreground list-disc list-inside">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>

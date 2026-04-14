@@ -1,0 +1,52 @@
+---
+import { personalInfo } from "@/data/personal"
+import { getTranslations, type Locale } from "@/i18n"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+
+const navLinks = [
+  { href: "#about", label: t.nav.about },
+  { href: "#projects", label: t.nav.projects },
+  { href: "#skills", label: locale === "en" ? "Skills" : "Habilidades" },
+  { href: "#contact", label: t.nav.contact },
+]
+
+const currentPath = Astro.url.pathname
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+  <nav class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="font-medium text-lg">
+      {personalInfo.name}
+    </a>
+
+    <div class="flex items-center gap-6">
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <a
+        href={`mailto:${personalInfo.email}`}
+        class="text-sm font-medium px-4 py-2 bg-foreground text-background rounded-md hover:opacity-90 transition-opacity"
+      >
+        {locale === "en" ? "Let's Talk" : "Hablemos"}
+      </a>
+    </div>
+  </nav>
+</header>
