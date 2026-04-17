@@ -15,7 +15,7 @@ export const personalInfo: PersonalInfo = {
   role: "Desarrollador de Software",
   location: "Lima, Perú",
   email: "jonathan.huertas.contreras@gmail.com",
-  linkedin: "https://linkedin.com/in/jonathanhuertas",
+  linkedin: "https://www.linkedin.com/in/jonathan-huertas-contreras/",
   github: "https://github.com/minn09",
   bio: "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario. He participado en la refactorización de aplicaciones, mejora de performance y desarrollo de soluciones web interactivas.",
 }

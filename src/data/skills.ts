@@ -11,8 +11,10 @@ export const skills: Skills = {
     "Next.js",
     "TypeScript",
     "TailwindCSS",
+    "shadcn/ui",
     "Zustand",
+    "Tanstack Query",
   ],
   backend: ["Node.js", "Express", "PostgreSQL"],
-  tools: ["Git", "GitHub", "Postman", "NPM"],
+  tools: ["Git", "GitHub", "Postman", "npm", "pnpm"],
 }
