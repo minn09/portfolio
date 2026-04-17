@@ -6,7 +6,6 @@ export interface PersonalInfo {
   email: string
   linkedin: string
   github: string
-  bio: string
 }
 
 export const personalInfo: PersonalInfo = {
@@ -17,5 +16,4 @@ export const personalInfo: PersonalInfo = {
   email: "jonathan.huertas.contreras@gmail.com",
   linkedin: "https://www.linkedin.com/in/jonathan-huertas-contreras/",
   github: "https://github.com/minn09",
-  bio: "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario. He participado en la refactorización de aplicaciones, mejora de performance y desarrollo de soluciones web interactivas.",
 }

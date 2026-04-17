@@ -21,15 +21,11 @@ const t = getTranslations(locale)
     </h1>
 
     <p class="mb-8 text-xl text-muted-foreground">
-      {
-        locale === "en"
-          ? "Software Developer specialized in React"
-          : "Desarrollador de Software especializado en React"
-      }
+      {t.hero.role}
     </p>
 
     <p class="mx-auto mb-8 max-w-xl text-muted-foreground">
-      {personalInfo.bio}
+      {t.about.bio}
     </p>
 
     <div class="flex items-center justify-center gap-4">

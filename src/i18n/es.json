@@ -8,12 +8,14 @@
   "hero": {
     "greeting": "Hola, soy",
     "tagline": "Desarrollador Frontend",
+    "role": "Desarrollador de Software especializado en React",
     "viewProjects": "Ver Proyectos",
     "contactMe": "Contáctame"
   },
   "about": {
     "title": "Sobre Mí",
-    "description": "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario."
+    "description": "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario.",
+    "bio": "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario. He participado en la refactorización de aplicaciones, mejora de performance y desarrollo de soluciones web interactivas."
   },
   "experience": {
     "title": "Experiencia"
@@ -37,6 +39,11 @@
     "or": "o encuéntrame en"
   },
   "footer": {
-    "copyright": ""
+    "copyright": "",
+    "dedication": "Hecho con dedicación para conectar tecnología y creatividad.",
+    "bio": "Desarrollador Frontend especializado en crear experiencias web modernas y accesibles.",
+    "contactTitle": "Contacto:",
+    "featuredProjects": "Proyectos Destacados",
+    "viewAllProjects": "Ver todos los proyectos"
   }
 }

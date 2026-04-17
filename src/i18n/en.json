@@ -8,12 +8,14 @@
   "hero": {
     "greeting": "Hi, I'm",
     "tagline": "Frontend Developer",
+    "role": "React Software Developer",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "description": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development."
+    "description": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development.",
+    "bio": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development. I have participated in application refactoring, performance improvement and development of interactive web solutions."
   },
   "experience": {
     "title": "Experience"
@@ -37,6 +39,11 @@
     "or": "or reach me on"
   },
   "footer": {
-    "copyright": ""
+    "copyright": "",
+    "dedication": "Made with dedication to connect technology and creativity.",
+    "bio": "Frontend Developer specialized in creating modern and accessible web experiences.",
+    "contactTitle": "Contact:",
+    "featuredProjects": "Featured Projects",
+    "viewAllProjects": "View all projects"
   }
 }
