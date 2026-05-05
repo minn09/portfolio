@@ -21,3 +21,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+PLAN-i18n.md
