@@ -35,6 +35,28 @@ const t = getTranslations(locale)
             <p class="mt-1 text-xs text-muted-foreground">
               {locale === "en" && exp.periodEn ? exp.periodEn : exp.period}
             </p>
+
+            <p class="mt-3 text-sm">
+              {locale === "en" && exp.highlightEn
+                ? exp.highlightEn
+                : exp.highlight}
+            </p>
+
+            <details class="mt-2">
+              <summary class="cursor-pointer text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none">
+                {t.experience.seeAll}
+              </summary>
+              <ul class="mt-3 space-y-2">
+                {(locale === "en" && exp.descriptionEn
+                  ? exp.descriptionEn
+                  : exp.description
+                ).map((item) => (
+                  <li class="list-inside list-disc text-sm text-muted-foreground">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </details>
           </li>
         ))
       }

@@ -5,11 +5,15 @@ export interface Experience {
   location: string
   period: string
   description: string[]
+  /** Single strongest achievement, shown in the timeline. Must be a condensed
+   *  version of one of the `description` items, never new information. */
+  highlight: string
   roleEn?: string
   companyEn?: string
   locationEn?: string
   periodEn?: string
   descriptionEn?: string[]
+  highlightEn?: string
 }
 
 export const experience: Experience[] = [
@@ -25,6 +29,10 @@ export const experience: Experience[] = [
     locationEn: "Lima, Peru",
     period: "Mayo 2025 - Noviembre 2025",
     periodEn: "May 2025 - November 2025",
+    highlight:
+      "Mejoré el rendimiento de la aplicación en un 40% optimizando el renderizado y la gestión del estado.",
+    highlightEn:
+      "Improved application performance by 40% through rendering and state management optimization.",
     description: [
       "Refactoricé aplicaciones en React y React Native utilizando TypeScript, mejorando la mantenibilidad y reduciendo errores en desarrollo.",
       "Implementé arquitectura modular y patrón MVC, separando responsabilidades en capas claras.",
@@ -54,6 +62,10 @@ export const experience: Experience[] = [
     locationEn: "Lima, Peru",
     period: "Diciembre 2023 - Abril 2025",
     periodEn: "December 2023 - April 2025",
+    highlight:
+      "Migré la aplicación hacia una arquitectura modular y mantuve sus funcionalidades en React y React Native.",
+    highlightEn:
+      "Led the migration towards a modular architecture and maintained features in React and React Native.",
     description: [
       "Desarrollé y mantuve funcionalidades en aplicaciones usando React y React Native.",
       "Participé en la migración hacia arquitectura modular.",
