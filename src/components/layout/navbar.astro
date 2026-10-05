@@ -25,15 +25,15 @@ const navLinks = [
   <nav
     class="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-6"
   >
-    <a
+<a
       href="/"
-      class="text-lg font-medium focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+      class="text-base font-medium focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 lg:text-lg"
     >
       {personalInfo.name}
     </a>
 
-    <div class="flex items-center gap-4 lg:gap-6">
-      <ul class="hidden items-center gap-4 text-sm md:flex lg:gap-6">
+    <div class="flex items-center gap-3 lg:gap-6">
+      <ul class="hidden items-center gap-3 text-sm md:flex lg:gap-5">
         {
           navLinks.map((link) => (
             <li>
@@ -74,11 +74,11 @@ const navLinks = [
         </a>
       </div>
 
-      <a
+<a
         href="#contact"
-        class="hidden rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none sm:inline-flex"
+        class="inline-flex shrink-0 whitespace-nowrap rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
       >
-        {t.hero.primaryCta}
+        {t.nav.cta}
       </a>
     </div>
   </nav>

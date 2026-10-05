@@ -10,6 +10,7 @@ export interface Translations {
     cases: string
     projects: string
     skills: string
+    cta: string
     blog: string
     contact: string
   }
