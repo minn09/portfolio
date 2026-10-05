@@ -32,14 +32,16 @@ const t = getTranslations(locale)
                 {locale === "en" ? study.titleEn : study.title}
               </CardTitle>
               <CardDescription>
-                <span class="flex flex-wrap gap-2">
-                  {study.stack.map((tech) => (
-                    <Badge variant="secondary">{tech}</Badge>
-                  ))}
-                </span>
+                {locale === "en" ? study.contextEn : study.context}
               </CardDescription>
             </CardHeader>
             <CardContent>
+              <div class="mb-4 flex flex-wrap gap-2">
+                {study.stack.map((tech) => (
+                  <Badge variant="secondary">{tech}</Badge>
+                ))}
+              </div>
+
               <dl class="space-y-4 text-sm">
                 <div>
                   <dt class="font-medium">{t.cases.problem}</dt>

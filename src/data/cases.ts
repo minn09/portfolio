@@ -2,6 +2,10 @@ export interface CaseStudy {
   id: string
   title: string
   titleEn: string
+  /** Where the work happened and with whom. These are team achievements from
+   *  the company the portfolio owner worked at, never solo work. */
+  context: string
+  contextEn: string
   problem: string
   problemEn: string
   action: string
@@ -16,6 +20,10 @@ export const caseStudies: CaseStudy[] = [
     id: "react-performance",
     title: "Rendimiento de una app React",
     titleEn: "Performance of a React app",
+    context:
+      "Logro del equipo en la empresa donde trabajaba: optimizamos esta aplicación junto a mis compañeros.",
+    contextEn:
+      "Team achievement at the company I worked for: we optimized this application together with my teammates.",
     problem:
       "Una aplicación React y React Native se quedaba corta en rendimiento: interfaces lentas y difíciles de extender.",
     problemEn:
@@ -36,6 +44,10 @@ export const caseStudies: CaseStudy[] = [
     id: "catalog-platform",
     title: "Catálogos PDF → plataforma web",
     titleEn: "PDF catalogs → web platform",
+    context:
+      "Logro del equipo en la empresa donde trabajaba: construimos la plataforma junto a mis compañeros y al equipo de backend.",
+    contextEn:
+      "Team achievement at the company I worked for: we built the platform together with my teammates and the backend team.",
     problem:
       "El producto se comunicaba en catálogos PDF: documentos estáticos, que no se podían actualizar con agilidad y que el usuario debía descargar.",
     problemEn:
