@@ -1,0 +1,69 @@
+---
+import { caseStudies } from "@/data/cases"
+import { getTranslations, type Locale } from "@/i18n"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="cases" class="py-10">
+  <div class="mx-auto max-w-4xl px-6">
+    <h2 class="mb-2 text-2xl font-semibold">{t.cases.title}</h2>
+    <p class="mb-8 max-w-2xl text-muted-foreground">{t.cases.subtitle}</p>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      {
+        caseStudies.map((study) => (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">
+                {locale === "en" ? study.titleEn : study.title}
+              </CardTitle>
+              <CardDescription>
+                <span class="flex flex-wrap gap-2">
+                  {study.stack.map((tech) => (
+                    <Badge variant="secondary">{tech}</Badge>
+                  ))}
+                </span>
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <dl class="space-y-4 text-sm">
+                <div>
+                  <dt class="font-medium">{t.cases.problem}</dt>
+                  <dd class="mt-1 text-muted-foreground">
+                    {locale === "en" ? study.problemEn : study.problem}
+                  </dd>
+                </div>
+                <div>
+                  <dt class="font-medium">{t.cases.action}</dt>
+                  <dd class="mt-1 text-muted-foreground">
+                    {locale === "en" ? study.actionEn : study.action}
+                  </dd>
+                </div>
+                <div>
+                  <dt class="font-medium">{t.cases.result}</dt>
+                  <dd class="mt-1 font-medium text-foreground">
+                    {locale === "en" ? study.resultEn : study.result}
+                  </dd>
+                </div>
+              </dl>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>

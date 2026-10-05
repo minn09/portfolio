@@ -1,0 +1,50 @@
+---
+import { services } from "@/data/services"
+import { getTranslations, type Locale } from "@/i18n"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="services" class="bg-muted/30 py-10">
+  <div class="mx-auto max-w-4xl px-6">
+    <h2 class="mb-2 text-2xl font-semibold">{t.services.title}</h2>
+    <p class="mb-8 max-w-2xl text-muted-foreground">{t.services.subtitle}</p>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        services.map((service) => (
+          <Card>
+            <CardContent>
+              <h3 class="font-heading text-base leading-snug font-medium">
+                {locale === "en" ? service.titleEn : service.title}
+              </h3>
+              <p class="mt-2 text-sm text-muted-foreground">
+                {locale === "en" ? service.descriptionEn : service.description}
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {service.stack.map((tech) => (
+                  <Badge variant="secondary">{tech}</Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+
+    <a
+      href="#contact"
+      class="mt-6 inline-flex items-center gap-2 text-sm font-medium underline-offset-4 transition-colors hover:underline focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+    >
+      {t.hero.primaryCta}
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>

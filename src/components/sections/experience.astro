@@ -1,7 +1,6 @@
 ---
 import { experience } from "@/data/experience"
 import { getTranslations, type Locale } from "@/i18n"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface Props {
   locale: Locale
@@ -11,44 +10,34 @@ const { locale } = Astro.props
 const t = getTranslations(locale)
 ---
 
-<section id="experience" class="bg-muted/30 py-10">
+<section id="experience" class="py-10">
   <div class="mx-auto max-w-4xl px-6">
     <h2 class="mb-8 text-2xl font-semibold">{t.experience.title}</h2>
 
-    <div class="space-y-6">
+    <ol class="border-l border-border">
       {
         experience.map((exp) => (
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg font-medium">
-                {locale === "en" && exp.roleEn ? exp.roleEn : exp.role}
-              </CardTitle>
-              <p class="text-sm text-muted-foreground">
-                {locale === "en" && exp.companyEn ? exp.companyEn : exp.company}{" "}
-                •{" "}
-                {locale === "en" && exp.locationEn
-                  ? exp.locationEn
-                  : exp.location}
-              </p>
-              <p class="text-xs text-muted-foreground">
-                {locale === "en" && exp.periodEn ? exp.periodEn : exp.period}
-              </p>
-            </CardHeader>
-            <CardContent>
-              <ul class="space-y-2">
-                {(locale === "en" && exp.descriptionEn
-                  ? exp.descriptionEn
-                  : exp.description
-                ).map((item) => (
-                  <li class="list-inside list-disc text-sm text-muted-foreground">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <li class="relative pb-8 pl-6 last:pb-0">
+            <span
+              class="absolute top-1.5 -left-[5px] size-2.5 rounded-full bg-foreground ring-4 ring-background"
+              aria-hidden="true"
+            />
+            <h3 class="font-heading text-base leading-snug font-medium">
+              {locale === "en" && exp.roleEn ? exp.roleEn : exp.role}
+            </h3>
+            <p class="text-sm text-muted-foreground">
+              {locale === "en" && exp.companyEn ? exp.companyEn : exp.company}
+              {" · "}
+              {locale === "en" && exp.locationEn
+                ? exp.locationEn
+                : exp.location}
+            </p>
+            <p class="mt-1 text-xs text-muted-foreground">
+              {locale === "en" && exp.periodEn ? exp.periodEn : exp.period}
+            </p>
+          </li>
         ))
       }
-    </div>
+    </ol>
   </div>
 </section>

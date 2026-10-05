@@ -16,6 +16,8 @@ export const experience: Experience[] = [
   {
     id: "best-sytel-frontend",
     company: "Best Sytel S.A.C.",
+    // TODO: verify the company name. "Best Sytel S.A.C." looks like a typo;
+    // confirm the legal name before publishing it.
     role: "Desarrollador Frontend",
     roleEn: "Frontend Developer",
     companyEn: "Best Sytel S.A.C.",
