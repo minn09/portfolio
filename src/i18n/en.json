@@ -1,29 +1,58 @@
 {
   "nav": {
     "about": "About",
+    "services": "Services",
+    "cases": "Cases",
     "projects": "Projects",
+    "skills": "Skills",
     "blog": "Blog",
     "contact": "Contact"
   },
+  "common": {
+    "roleTitle": "Frontend Developer",
+    "basedIn": "Based in Lima, Peru"
+  },
   "hero": {
     "greeting": "Hi, I'm",
-    "tagline": "Frontend Developer",
-    "role": "React Software Developer",
-    "viewProjects": "View Projects",
-    "contactMe": "Contact Me"
+    "headline": "I build web applications with React and Next.js: fast, maintainable and ready to scale",
+    "primaryCta": "Get a quote",
+    "secondaryCta": "View projects",
+    "scroll": "Scroll"
   },
   "about": {
-    "title": "About Me",
-    "description": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development.",
-    "bio": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development. I have participated in application refactoring and development of interactive web solutions."
+    "title": "About me",
+    "lead": "I work with React, Next.js and TypeScript. I care about the code that reaches production being readable and easy to extend six months later: modular architecture, strict types and code review as part of the job, not as an extra.",
+    "values": {
+      "performanceTitle": "Measurable performance",
+      "performanceText": "I optimize rendering and global state so interfaces load fast and stay responsive on modest devices.",
+      "architectureTitle": "Architecture before files",
+      "architectureText": "I separate responsibilities into clear layers so the project stays understandable as it grows.",
+      "collaborationTitle": "Team work",
+      "collaborationText": "I integrate REST APIs, align endpoint design with the backend team and take part in the team's code reviews."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Three ways to work together, depending on what your project needs."
+  },
+  "cases": {
+    "title": "Case studies",
+    "subtitle": "Real problems, what I did and what changed.",
+    "problem": "Problem",
+    "action": "What I did",
+    "result": "Result"
   },
   "experience": {
     "title": "Experience"
   },
   "projects": {
     "title": "Projects",
-    "viewCode": "View Code",
-    "live": "Live"
+    "demo": "View demo",
+    "viewCode": "View code"
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "Four steps, no surprises."
   },
   "skills": {
     "title": "Skills",
@@ -32,16 +61,24 @@
     "tools": "Tools"
   },
   "contact": {
-    "title": "Get in Touch",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send Message",
-    "or": "or reach me on"
+    "title": "Contact",
+    "intro": "Have a project in mind? Tell me what you need and I'll get back to you by email.",
+    "email": "Your email",
+    "message": "Your project",
+    "messageHint": "Tell me what you want to build, who it's for and whether you have a date in mind.",
+    "send": "Send message",
+    "or": "or reach me on",
+    "emailSubject": "Project inquiry",
+    "sending": "Preparing your message…",
+    "success": "Done: your email client opened with the message written.",
+    "successFallback": "If it did not open, write to me directly at",
+    "invalidEmail": "Enter a valid email address.",
+    "emptyMessage": "Tell me briefly what you need."
   },
   "footer": {
     "copyright": "",
     "dedication": "Made with dedication to connect technology and creativity.",
-    "bio": "Frontend Developer specialized in creating modern and accessible web experiences.",
+    "bio": "I build web applications with React and Next.js, ready to scale.",
     "contactTitle": "Contact:",
     "featuredProjects": "Featured Projects",
     "viewAllProjects": "View all projects"

@@ -1,29 +1,58 @@
 {
   "nav": {
     "about": "Sobre mí",
+    "services": "Servicios",
+    "cases": "Casos",
     "projects": "Proyectos",
+    "skills": "Habilidades",
     "blog": "Blog",
     "contact": "Contacto"
   },
+  "common": {
+    "roleTitle": "Desarrollador Frontend",
+    "basedIn": "Ubicado en Lima, Perú"
+  },
   "hero": {
     "greeting": "Hola, soy",
-    "tagline": "Desarrollador Frontend",
-    "role": "Desarrollador de Software especializado en React",
-    "viewProjects": "Ver Proyectos",
-    "contactMe": "Contáctame"
+    "headline": "Construyo aplicaciones web con React y Next.js: rápidas, mantenibles y listas para crecer",
+    "primaryCta": "Cotiza tu proyecto",
+    "secondaryCta": "Ver proyectos",
+    "scroll": "Desplázate"
   },
   "about": {
-    "title": "Sobre Mí",
-    "description": "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario.",
-    "bio": "Desarrollador de software con experiencia especializado en React, con experiencia en optimización de rendimiento, arquitectura modular y desarrollo de interfaces enfocadas en experiencia de usuario. He participado en la refactorización de aplicaciones, y desarrollo de soluciones web interactivas."
+    "title": "Sobre mí",
+    "lead": "Trabajo con React, Next.js y TypeScript. Me importa que el código que llega a producción sea fácil de leer y de extender seis meses después: arquitectura modular, tipos estrictos y revisión de código como parte del trabajo, no como un extra.",
+    "values": {
+      "performanceTitle": "Rendimiento medible",
+      "performanceText": "Optimizo el renderizado y el estado global para que las interfaces carguen rápido y respondan igual en dispositivos modestos.",
+      "architectureTitle": "Arquitectura antes que archivos",
+      "architectureText": "Separo responsabilidades en capas claras para que el proyecto siga siendo entendible cuando cresce.",
+      "collaborationTitle": "Trabajo en equipo",
+      "collaborationText": "Integro APIs REST, coordino el diseño de endpoints con backend y participo en las revisiones de código del equipo."
+    }
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Tres formas de trabajar juntos, según lo que tu proyecto necesite."
+  },
+  "cases": {
+    "title": "Casos de estudio",
+    "subtitle": "Problemas reales, qué hice y qué cambió.",
+    "problem": "Problema",
+    "action": "Qué hice",
+    "result": "Resultado"
   },
   "experience": {
     "title": "Experiencia"
   },
   "projects": {
     "title": "Proyectos",
-    "viewCode": "Ver Código",
-    "live": "Ver"
+    "demo": "Ver demo",
+    "viewCode": "Ver código"
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "subtitle": "Cuatro pasos, sin sorpresas."
   },
   "skills": {
     "title": "Habilidades",
@@ -32,16 +61,24 @@
     "tools": "Herramientas"
   },
   "contact": {
-    "title": "Contáctame",
-    "email": "Email",
-    "message": "Mensaje",
-    "send": "Enviar Mensaje",
-    "or": "o encuéntrame en"
+    "title": "Contacto",
+    "intro": "¿Tienes un proyecto en mente? Cuéntame qué necesitas y te respondo por email.",
+    "email": "Tu email",
+    "message": "Tu proyecto",
+    "messageHint": "Cuéntame qué quieres construir, para quién es y si tienes una fecha en mente.",
+    "send": "Enviar mensaje",
+    "or": "o encuéntrame en",
+    "emailSubject": "Consulta de proyecto",
+    "sending": "Preparando tu mensaje…",
+    "success": "Listo: abrí tu cliente de correo con el mensaje escrito.",
+    "successFallback": "Si no se abrió, escribe directamente a",
+    "invalidEmail": "Introduce un email válido.",
+    "emptyMessage": "Cuéntame brevemente qué necesitas."
   },
   "footer": {
     "copyright": "",
     "dedication": "Hecho con dedicación para conectar tecnología y creatividad.",
-    "bio": "Desarrollador Frontend especializado en crear experiencias web modernas y accesibles.",
+    "bio": "Construyo aplicaciones web con React y Next.js, listas para crecer.",
     "contactTitle": "Contacto:",
     "featuredProjects": "Proyectos Destacados",
     "viewAllProjects": "Ver todos los proyectos"
