@@ -43,7 +43,8 @@
     "result": "Resultado"
   },
   "experience": {
-    "title": "Experiencia"
+    "title": "Experiencia",
+    "seeAll": "Ver todos los logros"
   },
   "projects": {
     "title": "Proyectos",
@@ -75,6 +76,10 @@
     "successFallback": "Si no se abrió, escribe directamente a",
     "invalidEmail": "Introduce un email válido.",
     "emptyMessage": "Cuéntame brevemente qué necesitas."
+  },
+  "meta": {
+    "title": "Jonathan Huertas — Desarrollador Frontend | React y Next.js",
+    "description": "Desarrollador Frontend freelance. Construyo aplicaciones web, dashboards y landing pages con React, Next.js y TypeScript. Cotiza tu proyecto."
   },
   "footer": {
     "copyright": "",

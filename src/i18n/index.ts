@@ -49,6 +49,7 @@ export interface Translations {
   }
   experience: {
     title: string
+    seeAll: string
   }
   projects: {
     title: string
@@ -80,6 +81,10 @@ export interface Translations {
     successFallback: string
     invalidEmail: string
     emptyMessage: string
+  }
+  meta: {
+    title: string
+    description: string
   }
   footer: {
     copyright: string

@@ -43,7 +43,8 @@
     "result": "Result"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "seeAll": "See all achievements"
   },
   "projects": {
     "title": "Projects",
@@ -75,6 +76,10 @@
     "successFallback": "If it did not open, write to me directly at",
     "invalidEmail": "Enter a valid email address.",
     "emptyMessage": "Tell me briefly what you need."
+  },
+  "meta": {
+    "title": "Jonathan Huertas — Frontend Developer | React & Next.js",
+    "description": "Freelance Frontend Developer. I build web apps, dashboards and landing pages with React, Next.js and TypeScript. Get a quote for your project."
   },
   "footer": {
     "copyright": "",
