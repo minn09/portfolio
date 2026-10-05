@@ -6,6 +6,7 @@ import react from "@astrojs/react"
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://jonathan-huertas-conteras-portfolio.vercel.app",
   vite: {
     plugins: [tailwindcss()],
   },
