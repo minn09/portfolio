@@ -11,30 +11,35 @@ const t = getTranslations(locale)
 
 const navLinks = [
   { href: "#about", label: t.nav.about },
+  { href: "#services", label: t.nav.services },
+  { href: "#cases", label: t.nav.cases },
   { href: "#projects", label: t.nav.projects },
-  { href: "#skills", label: locale === "en" ? "Skills" : "Habilidades" },
+  { href: "#skills", label: t.nav.skills },
   { href: "#contact", label: t.nav.contact },
 ]
-
-const currentPath = Astro.url.pathname
 ---
 
 <header
   class="fixed top-0 right-0 left-0 z-50 border-b border-border bg-background/80 backdrop-blur-md"
 >
-  <nav class="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
-    <a href="/" class="text-lg font-medium">
+  <nav
+    class="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-6"
+  >
+    <a
+      href="/"
+      class="text-lg font-medium focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+    >
       {personalInfo.name}
     </a>
 
-    <div class="flex items-center gap-6">
-      <ul class="hidden items-center gap-6 text-sm md:flex">
+    <div class="flex items-center gap-4 lg:gap-6">
+      <ul class="hidden items-center gap-4 text-sm md:flex lg:gap-6">
         {
           navLinks.map((link) => (
             <li>
               <a
                 href={link.href}
-                class="text-muted-foreground transition-colors hover:text-foreground"
+                class="text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
               >
                 {link.label}
               </a>
@@ -44,10 +49,11 @@ const currentPath = Astro.url.pathname
       </ul>
 
       <!-- Language Switcher -->
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1">
         <a
           href="/"
-          class={`text-sm px-3 py-1 rounded-md transition-colors ${
+          aria-current={locale === "es" ? "page" : undefined}
+          class={`rounded-md px-2.5 py-1 text-sm transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 ${
             locale === "es"
               ? "bg-foreground text-background"
               : "text-muted-foreground hover:text-foreground"
@@ -57,7 +63,8 @@ const currentPath = Astro.url.pathname
         </a>
         <a
           href="/en"
-          class={`text-sm px-3 py-1 rounded-md transition-colors ${
+          aria-current={locale === "en" ? "page" : undefined}
+          class={`rounded-md px-2.5 py-1 text-sm transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 ${
             locale === "en"
               ? "bg-foreground text-background"
               : "text-muted-foreground hover:text-foreground"
@@ -68,10 +75,10 @@ const currentPath = Astro.url.pathname
       </div>
 
       <a
-        href={`mailto:${personalInfo.email}`}
-        class="rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
+        href="#contact"
+        class="hidden rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none sm:inline-flex"
       >
-        {locale === "en" ? "Let's Talk" : "Hablemos"}
+        {t.hero.primaryCta}
       </a>
     </div>
   </nav>

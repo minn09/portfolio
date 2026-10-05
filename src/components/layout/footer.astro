@@ -1,6 +1,6 @@
 ---
 import { personalInfo } from "@/data/personal"
-import { projects } from "@/data/projects"
+import { featuredProjects } from "@/data/projects"
 import { getTranslations, type Locale } from "@/i18n"
 
 interface Props {
@@ -9,9 +9,6 @@ interface Props {
 
 const { locale } = Astro.props
 const t = getTranslations(locale)
-
-// Get first 4 projects for featured section
-const featuredProjects = projects.slice(0, 4)
 ---
 
 <footer class="border-t border-border bg-accent-foreground py-12">
@@ -20,9 +17,10 @@ const featuredProjects = projects.slice(0, 4)
       <!-- Left Section - Personal Info -->
       <div class="space-y-6">
         <h2 class="text-3xl font-bold text-white">{personalInfo.name}</h2>
-        <p class="text-lg leading-relaxed text-gray-300">
-          {t.footer.bio}
+        <p class="text-sm font-medium tracking-wide text-gray-400 uppercase">
+          {t.common.roleTitle}
         </p>
+        <p class="text-lg leading-relaxed text-gray-300">{t.footer.bio}</p>
 
         <div class="space-y-4">
           <h3 class="text-xl font-semibold text-white">
@@ -116,7 +114,7 @@ const featuredProjects = projects.slice(0, 4)
           {
             featuredProjects.map((project) => (
               <a
-                href={project.link || project.github}
+                href={project.demo || project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="group flex items-center justify-between rounded-lg bg-black p-4 transition-all hover:scale-[1.02] hover:bg-zinc-800"
