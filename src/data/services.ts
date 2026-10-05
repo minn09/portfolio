@@ -9,33 +9,33 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "next-sites",
-    title: "Landing pages y sitios web con Next.js",
-    titleEn: "Landing pages and websites with Next.js",
-    description:
-      "Un sitio rápido y responsive que representa bien tu negocio, con una base de código lista para seguir añadiendo secciones y contenido.",
-    descriptionEn:
-      "A fast, responsive site that represents your business well, with a codebase ready to keep adding sections and content.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
     id: "react-apps",
-    title: "Aplicaciones web y dashboards con React",
-    titleEn: "Web applications and dashboards with React",
+    title: "Aplicaciones web y dashboards a medida",
+    titleEn: "Custom web applications and dashboards",
     description:
-      "Interfaces con estado global, datos conectados a APIs y componentes accesibles, estructuradas para que el equipo pueda seguir ampliándolas.",
+      "Aplicaciones web a medida para gestionar catálogos, pedidos, datos o procesos internos, conectadas a tus APIs y fáciles de seguir ampliando.",
     descriptionEn:
-      "Interfaces with global state, data connected to APIs and accessible components, structured so the team can keep extending them.",
-    stack: ["React", "Zustand", "TanStack Query", "shadcn/ui"],
+      "Custom web applications to manage catalogs, orders, data or internal processes, connected to your APIs and easy to keep extending.",
+    stack: ["React", "TypeScript", "Zustand", "REST APIs"],
   },
   {
     id: "refactor",
-    title: "Refactorización y optimización de apps existentes",
-    titleEn: "Refactoring and optimization of existing apps",
+    title: "Mejora y optimización de apps existentes",
+    titleEn: "Improvement and optimization of existing apps",
     description:
-      "Aplico arquitectura modular y TypeScript para ordenar el código y reduzco los tiempos de carga sin reescribir el proyecto desde cero.",
+      "Ordeno el código con arquitectura modular y TypeScript y mejoro el rendimiento para que tu app cargue y responda mejor, sin reescribirla desde cero.",
     descriptionEn:
-      "I apply modular architecture and TypeScript to tidy up the code and reduce load times without rewriting the project from scratch.",
-    stack: ["TypeScript", "React", "Zustand", "React Native"],
+      "I tidy up the code with a modular architecture and TypeScript and improve performance so your app loads and responds better, without rewriting it from scratch.",
+    stack: ["TypeScript", "React", "React Native", "Zustand"],
+  },
+  {
+    id: "next-sites",
+    title: "Sitios web y landing pages",
+    titleEn: "Websites and landing pages",
+    description:
+      "Un sitio rápido, que se ve bien en celular y en computadora, pensado para presentar tu negocio y que te contacten. Lo entrego con una base ordenada para añadir secciones más adelante.",
+    descriptionEn:
+      "A fast site that looks good on mobile and desktop, built to present your business and get people to contact you. Delivered with a tidy codebase so sections can be added later.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
 ]

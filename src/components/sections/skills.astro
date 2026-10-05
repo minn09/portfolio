@@ -11,20 +11,28 @@ const { locale } = Astro.props
 const t = getTranslations(locale)
 ---
 
-<section id="skills" class="bg-muted/30 py-10">
+<section id="skills" class="bg-muted/30 py-16">
   <div class="mx-auto max-w-4xl px-6">
-    <h2 class="mb-8 text-2xl font-semibold">{t.skills.title}</h2>
+    <div class="mb-10 text-center md:text-left">
+      <h2 class="text-3xl font-bold tracking-tight">{t.skills.title}</h2>
+      <p class="mt-2 text-sm text-muted-foreground">
+        Tecnologías y herramientas que utilizo habitualmente en el desarrollo.
+      </p>
+    </div>
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">{t.skills.frontend}</CardTitle>
+      <!-- Frontend -->
+      <Card className="transition-all hover:border-foreground/20">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg font-semibold"
+            >{t.skills.frontend}</CardTitle
+          >
         </CardHeader>
         <CardContent>
           <div class="flex flex-wrap gap-2">
             {
               skills.frontend.map((skill) => (
-                <span class="rounded-full bg-secondary px-3 py-1 text-sm text-secondary-foreground">
+                <span class="cursor-default rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground transition-all hover:bg-foreground hover:text-background">
                   {skill}
                 </span>
               ))
@@ -33,15 +41,18 @@ const t = getTranslations(locale)
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">{t.skills.backend}</CardTitle>
+      <!-- Backend -->
+      <Card className="transition-all hover:border-foreground/20">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg font-semibold"
+            >{t.skills.backend}</CardTitle
+          >
         </CardHeader>
         <CardContent>
           <div class="flex flex-wrap gap-2">
             {
               skills.backend.map((skill) => (
-                <span class="rounded-full bg-secondary px-3 py-1 text-sm text-secondary-foreground">
+                <span class="cursor-default rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground transition-all hover:bg-foreground hover:text-background">
                   {skill}
                 </span>
               ))
@@ -50,15 +61,18 @@ const t = getTranslations(locale)
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">{t.skills.tools}</CardTitle>
+      <!-- Tools -->
+      <Card className="transition-all hover:border-foreground/20">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg font-semibold"
+            >{t.skills.tools}</CardTitle
+          >
         </CardHeader>
         <CardContent>
           <div class="flex flex-wrap gap-2">
             {
               skills.tools.map((skill) => (
-                <span class="rounded-full bg-secondary px-3 py-1 text-sm text-secondary-foreground">
+                <span class="cursor-default rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground transition-all hover:bg-foreground hover:text-background">
                   {skill}
                 </span>
               ))

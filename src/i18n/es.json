@@ -22,14 +22,14 @@
   },
   "about": {
     "title": "Sobre mí",
-    "lead": "Trabajo con React, Next.js y TypeScript. Me importa que el código que llega a producción sea fácil de leer y de extender seis meses después: arquitectura modular, tipos estrictos y revisión de código como parte del trabajo, no como un extra.",
+    "lead": "Soy desarrollador frontend en Lima, con unos dos años de experiencia construyendo aplicaciones con React, React Native y Next.js. Trabajo para que lo que entrego sea fácil de usar hoy y fácil de modificar dentro de seis meses: código ordenado, TypeScript y revisión de código como parte del proceso, no como un extra.",
     "values": {
-      "performanceTitle": "Rendimiento medible",
-      "performanceText": "Optimizo el renderizado y el estado global para que las interfaces carguen rápido y respondan igual en dispositivos modestos.",
-      "architectureTitle": "Arquitectura antes que archivos",
-      "architectureText": "Separo responsabilidades en capas claras para que el proyecto siga siendo entendible cuando cresce.",
-      "collaborationTitle": "Trabajo en equipo",
-      "collaborationText": "Integro APIs REST, coordino el diseño de endpoints con backend y participo en las revisiones de código del equipo."
+      "performanceTitle": "Rendimiento que se nota",
+      "performanceText": "Optimizo el renderizado y el estado de la aplicación para que cargue y responda con fluidez. En una app móvil, ayudé a reducir el tiempo de inicio de unos 5 s a unos 2 s.",
+      "architectureTitle": "Código que escala contigo",
+      "architectureText": "Separo responsabilidades en capas claras para que el proyecto siga siendo fácil de entender y de ampliar cuando crezca.",
+      "collaborationTitle": "Trabajo contigo y con tu equipo",
+      "collaborationText": "Integro APIs REST, coordino el diseño de endpoints con backend y participo en revisiones de código, para que lo que entrego encaje con el resto de tu producto."
     }
   },
   "services": {

@@ -18,51 +18,46 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: "react-performance",
-    title: "Rendimiento de una app React",
-    titleEn: "Performance of a React app",
+    title: "Rendimiento de una app móvil",
+    titleEn: "Performance of a mobile app",
     context:
-      "Logro del equipo en la empresa donde trabajaba: optimizamos esta aplicación junto a mis compañeros.",
+      "Logro del equipo en Best Sytel S.A.C.: optimizamos esta aplicación junto a mis compañeros.",
     contextEn:
-      "Team achievement at the company I worked for: we optimized this application together with my teammates.",
+      "Team achievement at Best Sytel S.A.C.: we optimized this application together with my teammates.",
     problem:
-      "Una aplicación React y React Native se quedaba corta en rendimiento: interfaces lentas y difíciles de extender.",
+      "Una aplicación móvil en React Native se sentía lenta al iniciar y sus pantallas no eran fluidas, además de ser difícil de extender.",
     problemEn:
-      "A React and React Native application was falling short on performance: slow interfaces that were hard to extend.",
+      "A React Native mobile application felt slow on startup and its screens were not smooth, and it was hard to extend.",
     action:
       "Optimicé el renderizado, implementé gestión de estado global con Zustand y estructuré el proyecto con arquitectura modular y patrón MVC.",
     actionEn:
       "I optimized rendering, implemented global state management with Zustand and structured the project with a modular architecture and MVC pattern.",
-    result: "Rendimiento mejorado un 40%.",
-    resultEn: "Performance improved by 40%.",
-    stack: ["React", "React Native", "Zustand", "TypeScript"],
-    // TODO: add the baseline metric behind the 40% (load time, interaction
-    // latency, device class) and the measurement window. The source experience
-    // entry only states "mejoré el rendimiento en un 40%".
-    // TODO: confirm whether the client can be named publicly.
+    result:
+      "El inicio de la app pasó de unos 5 s a unos 2 s y la navegación entre vistas se volvió más fluida (tiempos aproximados, medidos en pruebas internas del equipo).",
+    resultEn:
+      "App startup went from about 5 s to about 2 s and navigation between views became smoother (approximate times, measured in internal team testing).",
+    stack: ["React Native", "Zustand", "TypeScript"],
   },
   {
     id: "catalog-platform",
     title: "Catálogos PDF → plataforma web",
     titleEn: "PDF catalogs → web platform",
     context:
-      "Logro del equipo en la empresa donde trabajaba: construimos la plataforma junto a mis compañeros y al equipo de backend.",
+      "Logro del equipo en Best Sytel S.A.C. (venta de motos, repuestos y accesorios): construimos la plataforma junto a mis compañeros y al equipo de backend.",
     contextEn:
-      "Team achievement at the company I worked for: we built the platform together with my teammates and the backend team.",
+      "Team achievement at Best Sytel S.A.C. (motorcycle, parts and accessories sales): we built the platform together with my teammates and the backend team.",
     problem:
-      "El producto se comunicaba en catálogos PDF: documentos estáticos, que no se podían actualizar con agilidad y que el usuario debía descargar.",
+      "El catálogo se enviaba a los clientes en PDF por WhatsApp. Cada cambio de precio, imagen o descripción obligaba a recrear el PDF y volver a enviarlo, y el equipo de ventas no veía qué estaba interesando a cada cliente.",
     problemEn:
-      "The product was communicated through PDF catalogs: static documents that could not be updated easily and that the user had to download.",
+      "The catalog was sent to customers as a PDF over WhatsApp. Every change to a price, image or description meant recreating the PDF and sending it again, and the sales team had no visibility into what each customer was interested in.",
     action:
-      "Desarrollé una aplicación web en React que reemplazó los catálogos en PDF por una plataforma interactiva y dinámica, integrando APIs REST.",
+      "Desarrollé una aplicación web en React, integrando APIs REST, donde el equipo de ventas edita precios, imágenes, descripciones detalladas, secciones de cada moto y stock. Los clientes eligen del catálogo, simulan su compra y arman su carrito.",
     actionEn:
-      "I developed a React web application that replaced the PDF catalogs with a dynamic interactive platform, integrating REST APIs.",
+      "I developed a React web application, integrating REST APIs, where the sales team edits prices, images, detailed descriptions, sections of each motorcycle and stock. Customers pick from the catalog, simulate their purchase and build their cart.",
     result:
-      "El contenido pasó de un PDF descargable a una experiencia web interactiva y siempre actualizada.",
+      "Los 4 empleados de ventas dejaron de recrear y reenviar PDFs: ahora actualizan todo desde la web y ven los pedidos en curso con los datos del cliente, lo que facilita negociar con él.",
     resultEn:
-      "The content went from a downloadable PDF to an interactive, always up-to-date web experience.",
+      "The 4 sales employees stopped recreating and resending PDFs: they now update everything from the web and see orders in progress with the customer's data, which makes negotiating with them easier.",
     stack: ["React", "REST APIs", "TypeScript"],
-    // TODO: add adoption metrics (users, downloads before/after, time to
-    // publish a catalog update). Not present in the source experience entry.
-    // TODO: confirm the industry/sector and whether the client can be named.
   },
 ]

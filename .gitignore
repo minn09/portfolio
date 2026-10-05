@@ -23,3 +23,4 @@ pnpm-debug.log*
 .idea/
 
 PLAN-i18n.md
+.atl/

@@ -25,14 +25,15 @@ const navLinks = [
   <nav
     class="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-6"
   >
-<a
+    <a
       href="/"
-      class="text-base font-medium focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 lg:text-lg"
+      class="text-base font-medium focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none lg:text-lg"
     >
       {personalInfo.name}
     </a>
 
     <div class="flex items-center gap-3 lg:gap-6">
+      <!-- Navegación de Escritorio -->
       <ul class="hidden items-center gap-3 text-sm md:flex lg:gap-5">
         {
           navLinks.map((link) => (
@@ -74,12 +75,113 @@ const navLinks = [
         </a>
       </div>
 
-<a
+      <!-- CTA Escritorio -->
+      <a
         href="#contact"
-        class="inline-flex shrink-0 whitespace-nowrap rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+        class="hidden shrink-0 rounded-lg bg-foreground px-4 py-2 text-sm font-medium whitespace-nowrap text-background transition-opacity hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none sm:inline-flex"
+      >
+        {t.nav.cta}
+      </a>
+
+      <!-- Botón Hamburguesa (Móvil) -->
+      <button
+        id="menu-btn"
+        type="button"
+        aria-label="Toggle Menu"
+        class="flex h-9 w-9 flex-col items-center justify-center rounded-lg border border-border bg-background text-foreground focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none md:hidden"
+      >
+        <span
+          id="hamburger-line-1"
+          class="h-0.5 w-4 translate-y-[-3.5px] bg-foreground transition-all duration-300"
+        ></span>
+        <span
+          id="hamburger-line-2"
+          class="h-0.5 w-4 translate-y-[3.5px] bg-foreground transition-all duration-300"
+        ></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú desplegable Móvil -->
+  <div
+    id="mobile-menu"
+    class="pointer-events-none absolute top-16 left-0 w-full -translate-y-2 border-b border-border bg-background/95 px-6 py-6 opacity-0 backdrop-blur-xl transition-all duration-300 ease-in-out md:hidden"
+  >
+    <ul class="flex flex-col gap-4 text-base">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="mobile-link block text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-6 flex flex-col gap-4 border-t border-border pt-6">
+      <a
+        href="#contact"
+        class="mobile-link flex items-center justify-center rounded-lg bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
       >
         {t.nav.cta}
       </a>
     </div>
-  </nav>
+  </div>
 </header>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn")
+  const mobileMenu = document.getElementById("mobile-menu")
+  const line1 = document.getElementById("hamburger-line-1")
+  const line2 = document.getElementById("hamburger-line-2")
+  const mobileLinks = document.querySelectorAll(".mobile-link")
+
+  let isOpen = false
+
+  function toggleMenu() {
+    isOpen = !isOpen
+    if (isOpen) {
+      mobileMenu?.classList.remove(
+        "opacity-0",
+        "pointer-events-none",
+        "-translate-y-2"
+      )
+      mobileMenu?.classList.add(
+        "opacity-100",
+        "pointer-events-auto",
+        "translate-y-0"
+      )
+      if (line1 && line2) {
+        line1.style.transform = "rotate(45deg) translate(0px, 0px)"
+        line2.style.transform = "rotate(-45deg) translate(0px, 0px)"
+      }
+    } else {
+      mobileMenu?.classList.add(
+        "opacity-0",
+        "pointer-events-none",
+        "-translate-y-2"
+      )
+      mobileMenu?.classList.remove(
+        "opacity-100",
+        "pointer-events-auto",
+        "translate-y-0"
+      )
+      if (line1 && line2) {
+        line1.style.transform = "translateY(-3.5px)"
+        line2.style.transform = "translateY(3.5px)"
+      }
+    }
+  }
+
+  menuBtn?.addEventListener("click", toggleMenu)
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isOpen) toggleMenu()
+    })
+  })
+</script>

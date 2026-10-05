@@ -22,14 +22,14 @@
   },
   "about": {
     "title": "About me",
-    "lead": "I work with React, Next.js and TypeScript. I care about the code that reaches production being readable and easy to extend six months later: modular architecture, strict types and code review as part of the job, not as an extra.",
+    "lead": "I'm a frontend developer based in Lima, Peru, with about two years of experience building applications with React, React Native and Next.js. I work to make what I deliver easy to use today and easy to modify in six months: clean code, TypeScript and code review as part of the process, not as an extra.",
     "values": {
-      "performanceTitle": "Measurable performance",
-      "performanceText": "I optimize rendering and global state so interfaces load fast and stay responsive on modest devices.",
-      "architectureTitle": "Architecture before files",
-      "architectureText": "I separate responsibilities into clear layers so the project stays understandable as it grows.",
-      "collaborationTitle": "Team work",
-      "collaborationText": "I integrate REST APIs, align endpoint design with the backend team and take part in the team's code reviews."
+      "performanceTitle": "Performance that matters",
+      "performanceText": "I optimize rendering and application state so it loads and responds smoothly. In a mobile app, I helped reduce startup time from about 5 s to about 2 s.",
+      "architectureTitle": "Code that scales with you",
+      "architectureText": "I separate responsibilities into clear layers so the project remains easy to understand and expand as it grows.",
+      "collaborationTitle": "I work with you and your team",
+      "collaborationText": "I integrate REST APIs, coordinate endpoint design with backend and participate in code reviews, so what I deliver fits with the rest of your product."
     }
   },
   "services": {
