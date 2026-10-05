@@ -54,6 +54,7 @@ export interface Translations {
     title: string
     demo: string
     viewCode: string
+    viewMoreOnGithub: string
   }
   process: {
     title: string

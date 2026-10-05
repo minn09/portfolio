@@ -14,39 +14,34 @@ const t = getTranslations(locale)
   <div class="mx-auto max-w-4xl px-6 text-center">
     <p class="mb-4 text-sm text-muted-foreground">
       {t.hero.greeting}
+      <span class="text-foreground">{personalInfo.fullName}</span>
+      <span class="mx-2 text-border" aria-hidden="true">•</span>
+      <span>{t.common.roleTitle}</span>
     </p>
 
-    <h1 class="mb-4 text-4xl font-bold md:text-6xl">
-      {personalInfo.fullName}
+    <h1 class="text-3xl font-bold text-balance md:text-5xl">
+      {t.hero.headline}
     </h1>
 
-    <p class="mb-8 text-xl text-muted-foreground">
-      {t.hero.role}
-    </p>
-
-    <p class="mx-auto mb-8 max-w-xl text-muted-foreground">
-      {t.about.bio}
-    </p>
-
-    <div class="flex items-center justify-center gap-4">
-      <a
-        href="#projects"
-        class="rounded-md bg-foreground px-6 py-3 font-medium text-background transition-opacity hover:opacity-90"
-      >
-        {t.hero.viewProjects}
-      </a>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
       <a
         href="#contact"
-        class="rounded-md border border-border px-6 py-3 font-medium transition-colors hover:bg-accent"
+        class="rounded-lg bg-foreground px-6 py-3 font-medium text-background transition-opacity hover:opacity-90 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
       >
-        {t.hero.contactMe}
+        {t.hero.primaryCta}
+      </a>
+      <a
+        href="#projects"
+        class="rounded-lg border border-border px-6 py-3 font-medium transition-colors hover:bg-accent focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+      >
+        {t.hero.secondaryCta}
       </a>
     </div>
 
     <!-- Scroll Arrow -->
     <div class="mt-8 animate-bounce md:mt-16">
       <div class="flex flex-col items-center text-center">
-        <span class="mb-2 text-sm text-muted-foreground">Scroll</span>
+        <span class="mb-2 text-sm text-muted-foreground">{t.hero.scroll}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -58,6 +53,7 @@ const t = getTranslations(locale)
           stroke-linecap="round"
           stroke-linejoin="round"
           class="text-muted-foreground"
+          aria-hidden="true"
         >
           <path d="m6 9 6 6 6-6"></path>
         </svg>

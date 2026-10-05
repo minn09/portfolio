@@ -48,7 +48,8 @@
   "projects": {
     "title": "Projects",
     "demo": "View demo",
-    "viewCode": "View code"
+    "viewCode": "View code",
+    "viewMoreOnGithub": "View more on GitHub"
   },
   "process": {
     "title": "How we work",

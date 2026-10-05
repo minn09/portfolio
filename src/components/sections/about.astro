@@ -8,6 +8,21 @@ interface Props {
 
 const { locale } = Astro.props
 const t = getTranslations(locale)
+
+const values = [
+  {
+    title: t.about.values.performanceTitle,
+    text: t.about.values.performanceText,
+  },
+  {
+    title: t.about.values.architectureTitle,
+    text: t.about.values.architectureText,
+  },
+  {
+    title: t.about.values.collaborationTitle,
+    text: t.about.values.collaborationText,
+  },
+]
 ---
 
 <section id="about" class="py-10">
@@ -16,16 +31,24 @@ const t = getTranslations(locale)
 
     <Card>
       <CardContent className="p-6">
-        <p class="leading-relaxed text-muted-foreground">
-          {t.about.description}
-        </p>
-
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="text-sm text-muted-foreground">
-            {locale === "en" ? "Based in" : "Ubicado en"}: Lima, Perú
-          </span>
-        </div>
+        <p class="leading-relaxed text-muted-foreground">{t.about.lead}</p>
+        <p class="mt-4 text-sm text-muted-foreground">{t.common.basedIn}</p>
       </CardContent>
     </Card>
+
+    <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        values.map((value) => (
+          <Card size="sm">
+            <CardContent>
+              <h3 class="font-heading text-base leading-snug font-medium">
+                {value.title}
+              </h3>
+              <p class="mt-2 text-sm text-muted-foreground">{value.text}</p>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
   </div>
 </section>
