@@ -1,7 +1,7 @@
 ---
 import { personalInfo } from "@/data/personal"
 import { getTranslations, type Locale } from "@/i18n"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -20,32 +20,26 @@ const t = getTranslations(locale)
 
     <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
       <div>
-        <p class="mb-8 text-muted-foreground">
-          {
-            locale === "en"
-              ? "I'm currently available for new opportunities. Feel free to reach out!"
-              : "Actualmente estoy disponible para nuevas oportunidades. ¡No dudes en contactarme!"
-          }
-        </p>
+        <!-- TODO: add the response-time promise back here once you commit to a
+        SLA (e.g. "te respondo en menos de 48 horas"). -->
+        <p class="mb-8 text-muted-foreground">{t.contact.intro}</p>
 
         <div class="space-y-4">
           <a
             href={`mailto:${personalInfo.email}`}
-            class="block text-foreground transition-colors hover:text-muted-foreground"
+            class="block text-foreground transition-colors hover:text-muted-foreground focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
           >
             {personalInfo.email}
           </a>
 
-          <p class="text-sm text-muted-foreground">
-            {t.contact.or}
-          </p>
+          <p class="text-sm text-muted-foreground">{t.contact.or}</p>
 
           <div class="flex gap-4">
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-muted-foreground transition-colors hover:text-foreground"
+              class="text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
             >
               GitHub
             </a>
@@ -53,42 +47,207 @@ const t = getTranslations(locale)
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-muted-foreground transition-colors hover:text-foreground"
+              class="text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
             >
               LinkedIn
             </a>
+            <!-- TODO: add a WhatsApp link here once the number is in
+            src/data/personal.ts. -->
           </div>
         </div>
       </div>
 
       <Card>
         <CardContent className="p-6">
+          <!-- TODO: replace the mailto: submit with a real form endpoint
+          (Formspree, Resend or an Astro API route) so messages arrive without
+          depending on the visitor's email client. The states below already
+          cover the loading/success feedback a real endpoint needs. -->
           <form
+            id="contact-form"
             class="space-y-4"
-            action={`mailto:${personalInfo.email}`}
-            method="post"
-            enctype="text/plain"
+            novalidate
+            data-email={personalInfo.email}
+            data-subject={t.contact.emailSubject}
+            data-sending={t.contact.sending}
+            data-success={t.contact.success}
+            data-fallback={t.contact.successFallback}
+            data-invalid-email={t.contact.invalidEmail}
+            data-empty-message={t.contact.emptyMessage}
           >
             <div>
               <label for="email" class="mb-2 block text-sm font-medium">
                 {t.contact.email}
               </label>
-              <Input type="email" id="email" name="email" required />
+              <Input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autoComplete="email"
+                aria-describedby="email-error"
+              />
+              <p
+                id="email-error"
+                class="mt-1.5 hidden text-sm text-destructive"
+                role="alert"
+              >
+              </p>
             </div>
 
             <div>
               <label for="message" class="mb-2 block text-sm font-medium">
                 {t.contact.message}
               </label>
-              <Textarea id="message" name="message" rows={5} required />
+              <Textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                placeholder={t.contact.messageHint}
+                aria-describedby="message-error"
+              />
+              <p
+                id="message-error"
+                class="mt-1.5 hidden text-sm text-destructive"
+                role="alert"
+              >
+              </p>
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="h-9 w-full gap-2" data-submit>
               {t.contact.send}
             </Button>
+
+            <p
+              id="contact-status"
+              class="hidden text-sm"
+              role="status"
+              aria-live="polite"
+              tabindex="-1"
+            >
+            </p>
+
+            <p
+              id="contact-fallback"
+              class="hidden text-sm text-muted-foreground"
+            >
+              <span data-fallback-text></span>
+              <a
+                href={`mailto:${personalInfo.email}`}
+                class="underline underline-offset-4 hover:text-foreground"
+              >
+                {personalInfo.email}
+              </a>
+            </p>
           </form>
         </CardContent>
       </Card>
     </div>
   </div>
 </section>
+
+<script>
+  const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+
+  const form = document.getElementById("contact-form") as HTMLFormElement | null
+
+  if (form) {
+    const emailInput = form.querySelector<HTMLInputElement>("#email")
+    const messageInput = form.querySelector<HTMLTextAreaElement>("#message")
+    const emailError = form.querySelector<HTMLParagraphElement>("#email-error")
+    const messageError =
+      form.querySelector<HTMLParagraphElement>("#message-error")
+    const status = form.querySelector<HTMLParagraphElement>("#contact-status")
+    const fallback =
+      form.querySelector<HTMLParagraphElement>("#contact-fallback")
+    const fallbackText = form.querySelector<HTMLElement>("[data-fallback-text]")
+    const submitButton = form.querySelector<HTMLButtonElement>("[data-submit]")
+
+    const config = {
+      subject: form.dataset.subject ?? "",
+      sending: form.dataset.sending ?? "",
+      success: form.dataset.success ?? "",
+      fallback: form.dataset.fallback ?? "",
+      invalidEmail: form.dataset.invalidEmail ?? "",
+      emptyMessage: form.dataset.emptyMessage ?? "",
+    }
+
+    const setError = (
+      input: HTMLInputElement | HTMLTextAreaElement,
+      errorNode: HTMLParagraphElement | null,
+      message: string
+    ) => {
+      if (errorNode) {
+        errorNode.textContent = message
+        errorNode.classList.toggle("hidden", !message)
+      }
+      if (message) {
+        input.setAttribute("aria-invalid", "true")
+      } else {
+        input.removeAttribute("aria-invalid")
+      }
+    }
+
+    const showStatus = (message: string, tone: "info" | "success") => {
+      if (!status) return
+      status.textContent = message
+      status.classList.remove("hidden")
+      status.classList.toggle("text-muted-foreground", tone === "info")
+      status.classList.toggle("text-foreground", tone === "success")
+      status.focus()
+      if (fallback) fallback.classList.toggle("hidden", tone !== "success")
+      if (fallbackText) fallbackText.textContent = `${config.fallback} `
+    }
+
+    emailInput?.addEventListener("input", () => {
+      setError(emailInput, emailError, "")
+    })
+    messageInput?.addEventListener("input", () => {
+      setError(messageInput, messageError, "")
+    })
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault()
+
+      const email = emailInput?.value.trim() ?? ""
+      const message = messageInput?.value.trim() ?? ""
+      const emailInvalid = !EMAIL_PATTERN.test(email)
+      const messageInvalid = message.length === 0
+
+      if (emailInput)
+        setError(
+          emailInput,
+          emailError,
+          emailInvalid ? config.invalidEmail : ""
+        )
+      if (messageInput)
+        setError(
+          messageInput,
+          messageError,
+          messageInvalid ? config.emptyMessage : ""
+        )
+
+      if (emailInvalid || messageInvalid) {
+        const firstInvalid = emailInvalid ? emailInput : messageInput
+        firstInvalid?.focus()
+        return
+      }
+
+      if (status) status.classList.add("hidden")
+      if (fallback) fallback.classList.add("hidden")
+      if (submitButton) {
+        submitButton.setAttribute("disabled", "")
+        submitButton.setAttribute("data-loading", "")
+      }
+      showStatus(config.sending, "info")
+
+      const subject = encodeURIComponent(config.subject)
+      const body = encodeURIComponent(`From: ${email}\n\n${message}`)
+      window.location.href = `mailto:${(form.dataset.email ?? "").trim()}?subject=${subject}&body=${body}`
+
+      showStatus(config.success, "success")
+      if (submitButton) submitButton.removeAttribute("disabled")
+    })
+  }
+</script>
