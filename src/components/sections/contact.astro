@@ -195,8 +195,8 @@ const t = getTranslations(locale)
       if (!status) return
       status.textContent = message
       status.classList.remove("hidden")
-      status.classList.toggle("text-muted-foreground", tone === "info")
-      status.classList.toggle("text-foreground", tone === "success")
+      status.classList.toggle("text-background/70", tone === "info")
+      status.classList.toggle("text-background", tone === "success")
       status.focus()
       if (fallback) fallback.classList.toggle("hidden", tone !== "success")
       if (fallbackText) fallbackText.textContent = `${config.fallback} `
