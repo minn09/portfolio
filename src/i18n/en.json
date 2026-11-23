@@ -1,11 +1,10 @@
 {
   "nav": {
     "about": "About",
-    "services": "Services",
     "cases": "Cases",
     "projects": "Projects",
     "skills": "Skills",
-    "cta": "Get a quote",
+    "cta": "View projects",
     "blog": "Blog",
     "contact": "Contact"
   },
@@ -15,9 +14,9 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "headline": "I build web applications with React and Next.js: fast, maintainable and ready to scale",
-    "primaryCta": "Get a quote",
-    "secondaryCta": "View projects",
+    "headline": "I build web applications with React and Next.js, with a focus on clarity, maintainability, and performance.",
+    "primaryCta": "View projects",
+    "secondaryCta": "Contact",
     "scroll": "Scroll"
   },
   "about": {
@@ -31,10 +30,6 @@
       "collaborationTitle": "I work with you and your team",
       "collaborationText": "I integrate REST APIs, coordinate endpoint design with backend and participate in code reviews, so what I deliver fits with the rest of your product."
     }
-  },
-  "services": {
-    "title": "Services",
-    "subtitle": "Three ways to work together, depending on what your project needs."
   },
   "cases": {
     "title": "Case studies",
@@ -53,10 +48,6 @@
     "viewCode": "View code",
     "viewMoreOnGithub": "View more on GitHub"
   },
-  "process": {
-    "title": "How we work",
-    "subtitle": "Four steps, no surprises."
-  },
   "skills": {
     "title": "Skills",
     "frontend": "Frontend",
@@ -65,27 +56,27 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Have a project in mind? Tell me what you need and I'll get back to you by email.",
+    "intro": "If you want to talk about development, collaborate, or just say hi, feel free to reach out by email.",
     "email": "Your email",
-    "message": "Your project",
-    "messageHint": "Tell me what you want to build, who it's for and whether you have a date in mind.",
+    "message": "Your message",
+    "messageHint": "Write your message here.",
     "send": "Send message",
     "or": "or reach me on",
-    "emailSubject": "Project inquiry",
+    "emailSubject": "Portfolio contact",
     "sending": "Preparing your message…",
     "success": "Done: your email client opened with the message written.",
     "successFallback": "If it did not open, write to me directly at",
     "invalidEmail": "Enter a valid email address.",
-    "emptyMessage": "Tell me briefly what you need."
+    "emptyMessage": "Write a message before sending."
   },
   "meta": {
     "title": "Jonathan Huertas — Frontend Developer | React & Next.js",
-    "description": "Freelance Frontend Developer. I build web apps, dashboards and landing pages with React, Next.js and TypeScript. Get a quote for your project."
+    "description": "Portfolio of Jonathan Huertas, a frontend developer based in Lima, Peru. Projects and experience with React, Next.js, and TypeScript."
   },
   "footer": {
     "copyright": "",
     "dedication": "Made with dedication to connect technology and creativity.",
-    "bio": "I build web applications with React and Next.js, ready to scale.",
+    "bio": "Frontend developer building web projects with React and Next.js.",
     "contactTitle": "Contact:",
     "featuredProjects": "Featured Projects",
     "viewAllProjects": "View all projects"

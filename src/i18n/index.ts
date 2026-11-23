@@ -6,7 +6,6 @@ export type Locale = "en" | "es"
 export interface Translations {
   nav: {
     about: string
-    services: string
     cases: string
     projects: string
     skills: string
@@ -37,10 +36,6 @@ export interface Translations {
       collaborationText: string
     }
   }
-  services: {
-    title: string
-    subtitle: string
-  }
   cases: {
     title: string
     subtitle: string
@@ -57,10 +52,6 @@ export interface Translations {
     demo: string
     viewCode: string
     viewMoreOnGithub: string
-  }
-  process: {
-    title: string
-    subtitle: string
   }
   skills: {
     title: string
