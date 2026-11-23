@@ -8,13 +8,6 @@ interface Props {
 
 const { locale } = Astro.props
 const t = getTranslations(locale)
-
-const metricByCase: Record<string, string> = {
-  "react-performance":
-    locale === "en" ? "about 5 s to about 2 s" : "unos 5 s a unos 2 s",
-  "catalog-platform":
-    locale === "en" ? "The 4 sales employees" : "Los 4 empleados de ventas",
-}
 ---
 
 <section id="cases" class="py-16 lg:py-24">
@@ -39,9 +32,6 @@ const metricByCase: Record<string, string> = {
                   {locale === "en" ? study.contextEn : study.context}
                 </p>
               </div>
-              <p class="tabular text-4xl font-semibold text-foreground lg:text-5xl">
-                {metricByCase[study.id]}
-              </p>
             </div>
 
             <dl class="mt-8">
