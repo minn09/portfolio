@@ -2,9 +2,12 @@
 import Layout from "@/layouts/main.astro"
 import Hero from "@/components/sections/hero.astro"
 import About from "@/components/sections/about.astro"
+import Services from "@/components/sections/services.astro"
 import Experience from "@/components/sections/experience.astro"
+import Cases from "@/components/sections/cases.astro"
 import Projects from "@/components/sections/projects.astro"
 import Skills from "@/components/sections/skills.astro"
+import Process from "@/components/sections/process.astro"
 import Contact from "@/components/sections/contact.astro"
 
 const locale = "es"
@@ -13,8 +16,11 @@ const locale = "es"
 <Layout locale={locale}>
   <Hero locale={locale} />
   <About locale={locale} />
+  <Services locale={locale} />
   <Experience locale={locale} />
+  <Cases locale={locale} />
   <Projects locale={locale} />
   <Skills locale={locale} />
+  <Process locale={locale} />
   <Contact locale={locale} />
 </Layout>

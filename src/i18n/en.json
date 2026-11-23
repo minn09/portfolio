@@ -1,29 +1,61 @@
 {
   "nav": {
     "about": "About",
+    "services": "Services",
+    "cases": "Cases",
     "projects": "Projects",
+    "skills": "Skills",
+    "cta": "Get a quote",
     "blog": "Blog",
     "contact": "Contact"
   },
+  "common": {
+    "roleTitle": "Frontend Developer",
+    "basedIn": "Based in Lima, Peru"
+  },
   "hero": {
     "greeting": "Hi, I'm",
-    "tagline": "Frontend Developer",
-    "role": "React Software Developer",
-    "viewProjects": "View Projects",
-    "contactMe": "Contact Me"
+    "headline": "I build web applications with React and Next.js: fast, maintainable and ready to scale",
+    "primaryCta": "Get a quote",
+    "secondaryCta": "View projects",
+    "scroll": "Scroll"
   },
   "about": {
-    "title": "About Me",
-    "description": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development.",
-    "bio": "Software developer with experience specialized in React, with experience in performance optimization, modular architecture and user-focused interface development. I have participated in application refactoring, performance improvement and development of interactive web solutions."
+    "title": "About me",
+    "lead": "I'm a frontend developer based in Lima, Peru, with about two years of experience building applications with React, React Native and Next.js. I work to make what I deliver easy to use today and easy to modify in six months: clean code, TypeScript and code review as part of the process, not as an extra.",
+    "values": {
+      "performanceTitle": "Performance that matters",
+      "performanceText": "I optimize rendering and application state so it loads and responds smoothly. In a mobile app, I helped reduce startup time from about 5 s to about 2 s.",
+      "architectureTitle": "Code that scales with you",
+      "architectureText": "I separate responsibilities into clear layers so the project remains easy to understand and expand as it grows.",
+      "collaborationTitle": "I work with you and your team",
+      "collaborationText": "I integrate REST APIs, coordinate endpoint design with backend and participate in code reviews, so what I deliver fits with the rest of your product."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Three ways to work together, depending on what your project needs."
+  },
+  "cases": {
+    "title": "Case studies",
+    "subtitle": "Real problems, what I did and what changed.",
+    "problem": "Problem",
+    "action": "What I did",
+    "result": "Result"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "seeAll": "See all achievements"
   },
   "projects": {
     "title": "Projects",
-    "viewCode": "View Code",
-    "live": "Live"
+    "demo": "View demo",
+    "viewCode": "View code",
+    "viewMoreOnGithub": "View more on GitHub"
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "Four steps, no surprises."
   },
   "skills": {
     "title": "Skills",
@@ -32,16 +64,28 @@
     "tools": "Tools"
   },
   "contact": {
-    "title": "Get in Touch",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send Message",
-    "or": "or reach me on"
+    "title": "Contact",
+    "intro": "Have a project in mind? Tell me what you need and I'll get back to you by email.",
+    "email": "Your email",
+    "message": "Your project",
+    "messageHint": "Tell me what you want to build, who it's for and whether you have a date in mind.",
+    "send": "Send message",
+    "or": "or reach me on",
+    "emailSubject": "Project inquiry",
+    "sending": "Preparing your message…",
+    "success": "Done: your email client opened with the message written.",
+    "successFallback": "If it did not open, write to me directly at",
+    "invalidEmail": "Enter a valid email address.",
+    "emptyMessage": "Tell me briefly what you need."
+  },
+  "meta": {
+    "title": "Jonathan Huertas — Frontend Developer | React & Next.js",
+    "description": "Freelance Frontend Developer. I build web apps, dashboards and landing pages with React, Next.js and TypeScript. Get a quote for your project."
   },
   "footer": {
     "copyright": "",
     "dedication": "Made with dedication to connect technology and creativity.",
-    "bio": "Frontend Developer specialized in creating modern and accessible web experiences.",
+    "bio": "I build web applications with React and Next.js, ready to scale.",
     "contactTitle": "Contact:",
     "featuredProjects": "Featured Projects",
     "viewAllProjects": "View all projects"

@@ -1,15 +1,20 @@
 ---
 import "@/styles/global.css"
-import { defaultLocale } from "@/i18n"
+import { defaultLocale, getTranslations } from "@/i18n"
 import Navbar from "@/components/layout/navbar.astro"
 import Footer from "@/components/layout/footer.astro"
 
 interface Props {
   title?: string
+  description?: string
   locale?: "en" | "es"
 }
 
-const { title = "Jonathan Huertas", locale = defaultLocale } = Astro.props
+const { locale = defaultLocale } = Astro.props
+const t = getTranslations(locale)
+const { title = t.meta.title, description = t.meta.description } = Astro.props
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
 ---
 
 <html lang={locale}>
@@ -17,7 +22,21 @@ const { title = "Jonathan Huertas", locale = defaultLocale } = Astro.props
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- TODO: add an absolute URL to a 1200x630 share image here (og:image
+    and twitter:image) once the asset exists in public/. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jonathan Huertas" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={locale === "en" ? "en_US" : "es_ES"} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
   </head>
   <body class="min-h-screen bg-background antialiased">
     <Navbar locale={locale} />

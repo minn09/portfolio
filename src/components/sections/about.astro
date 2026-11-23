@@ -1,6 +1,8 @@
 ---
 import { getTranslations, type Locale } from "@/i18n"
 import { Card, CardContent } from "@/components/ui/card"
+import pkg from "lucide-react"
+const { Gauge, Layers, Users, MapPin } = pkg
 
 interface Props {
   locale: Locale
@@ -8,24 +10,60 @@ interface Props {
 
 const { locale } = Astro.props
 const t = getTranslations(locale)
+
+const values = [
+  {
+    icon: Gauge,
+    title: t.about.values.performanceTitle,
+    text: t.about.values.performanceText,
+  },
+  {
+    icon: Layers,
+    title: t.about.values.architectureTitle,
+    text: t.about.values.architectureText,
+  },
+  {
+    icon: Users,
+    title: t.about.values.collaborationTitle,
+    text: t.about.values.collaborationText,
+  },
+]
 ---
 
-<section id="about" class="py-10">
+<section id="about">
   <div class="mx-auto max-w-4xl px-6">
     <h2 class="mb-8 text-2xl font-semibold">{t.about.title}</h2>
 
-    <Card>
-      <CardContent className="p-6">
-        <p class="leading-relaxed text-muted-foreground">
-          {t.about.description}
-        </p>
+    <p class="max-w-3xl text-lg leading-relaxed text-foreground/90">
+      {t.about.lead}
+    </p>
 
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="text-sm text-muted-foreground">
-            {locale === "en" ? "Based in" : "Ubicado en"}: Lima, Perú
-          </span>
-        </div>
-      </CardContent>
-    </Card>
+    <p class="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+      <MapPin width="16" height="16" aria-hidden="true" />
+      {t.common.basedIn}
+    </p>
+
+    <ul class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        values.map(({ icon: Icon, title, text }) => (
+          <li>
+            <Card size="sm" className="h-full">
+              <CardContent>
+                <span
+                  class="flex size-8 items-center justify-center rounded-lg bg-secondary text-secondary-foreground"
+                  aria-hidden="true"
+                >
+                  <Icon width="16" height="16" />
+                </span>
+                <h3 class="mt-3 font-heading text-base leading-snug font-medium">
+                  {title}
+                </h3>
+                <p class="mt-2 text-sm text-muted-foreground">{text}</p>
+              </CardContent>
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </section>

@@ -1,5 +1,5 @@
 ---
-import { projects } from "@/data/projects"
+import { featuredProjects } from "@/data/projects"
 import { getTranslations, type Locale } from "@/i18n"
 import {
   Card,
@@ -26,7 +26,7 @@ const t = getTranslations(locale)
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
       {
-        projects.map((project) => (
+        featuredProjects.map((project) => (
           <Card>
             <CardHeader>
               <CardTitle className="text-lg">{project.title}</CardTitle>
@@ -36,52 +36,34 @@ const t = getTranslations(locale)
                   : project.description}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex h-full flex-col justify-between">
               <div class="mb-4 flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <Badge variant="secondary">{tech}</Badge>
                 ))}
               </div>
 
-              <div class="flex gap-4">
+              <div class="flex flex-wrap gap-3">
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 rounded border border-border px-3 py-1 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                    class="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
                   >
-                    <Code
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
+                    <Code width="16" height="16" aria-hidden="true" />
                     {t.projects.viewCode}
                   </a>
                 )}
-                {project.link && (
+                {project.demo && (
                   <a
-                    href={project.link}
+                    href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 rounded bg-primary px-3 py-1 text-sm text-primary-foreground transition-colors hover:bg-primary/90"
+                    class="inline-flex items-center gap-2 rounded-lg bg-primary px-3 py-1.5 text-sm text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
                   >
-                    <ExternalLink
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    {t.projects.live}
+                    <ExternalLink width="16" height="16" aria-hidden="true" />
+                    {t.projects.demo}
                   </a>
                 )}
               </div>
@@ -90,5 +72,15 @@ const t = getTranslations(locale)
         ))
       }
     </div>
+
+    <a
+      href="https://github.com/minn09"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+    >
+      {t.projects.viewMoreOnGithub}
+      <ExternalLink width="14" height="14" aria-hidden="true" />
+    </a>
   </div>
 </section>

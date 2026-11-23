@@ -1,0 +1,78 @@
+---
+import { caseStudies } from "@/data/cases"
+import { getTranslations, type Locale } from "@/i18n"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section id="cases" class="py-16">
+  <div class="mx-auto max-w-4xl px-6">
+    <div class="mb-10">
+      <h2 class="text-3xl font-bold tracking-tight">{t.cases.title}</h2>
+      <p class="mt-2 max-w-2xl text-sm text-muted-foreground">
+        {t.cases.subtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      {
+        caseStudies.map((study) => (
+          <Card className="flex flex-col justify-between transition-all hover:border-foreground/20">
+            <CardHeader>
+              <CardTitle className="text-lg font-semibold">
+                {locale === "en" ? study.titleEn : study.title}
+              </CardTitle>
+              <CardDescription className="text-sm">
+                {locale === "en" ? study.contextEn : study.context}
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="space-y-4">
+              <div class="flex flex-wrap gap-2">
+                {study.stack.map((tech) => (
+                  <Badge variant="secondary" className="text-xs font-medium">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+
+              <dl class="space-y-3 border-t border-border/40 pt-4 text-sm">
+                <div>
+                  <dt class="font-medium text-foreground">{t.cases.problem}</dt>
+                  <dd class="mt-1 leading-relaxed text-muted-foreground">
+                    {locale === "en" ? study.problemEn : study.problem}
+                  </dd>
+                </div>
+                <div>
+                  <dt class="font-medium text-foreground">{t.cases.action}</dt>
+                  <dd class="mt-1 leading-relaxed text-muted-foreground">
+                    {locale === "en" ? study.actionEn : study.action}
+                  </dd>
+                </div>
+                <div>
+                  <dt class="font-medium text-foreground">{t.cases.result}</dt>
+                  <dd class="mt-1 leading-relaxed font-medium text-foreground">
+                    {locale === "en" ? study.resultEn : study.result}
+                  </dd>
+                </div>
+              </dl>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>

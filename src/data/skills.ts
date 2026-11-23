@@ -1,20 +1,18 @@
-export interface Skills {
-  frontend: string[]
-  backend: string[]
-  tools: string[]
-}
-
-export const skills: Skills = {
+export const skills = {
   frontend: [
-    "React",
-    "React Native",
     "Next.js",
     "TypeScript",
-    "TailwindCSS",
-    "shadcn/ui",
+    "Tailwind CSS",
     "Zustand",
-    "Tanstack Query",
+    "TanStack Query",
+    "React Hook Form",
+    "Zod",
   ],
-  backend: ["Node.js", "Express", "PostgreSQL"],
-  tools: ["Git", "GitHub", "Postman", "npm", "pnpm"],
+  backend: [
+    "Node.js",
+    "Express",
+    "REST APIs",
+    // Aquí puedes dejar bases de datos o servicios backend básicos si usas
+  ],
+  tools: ["Git", "GitHub", "Vercel"],
 }

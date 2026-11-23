@@ -6,29 +6,61 @@ export type Locale = "en" | "es"
 export interface Translations {
   nav: {
     about: string
+    services: string
+    cases: string
     projects: string
+    skills: string
+    cta: string
     blog: string
     contact: string
   }
+  common: {
+    roleTitle: string
+    basedIn: string
+  }
   hero: {
     greeting: string
-    tagline: string
-    role: string
-    viewProjects: string
-    contactMe: string
+    headline: string
+    primaryCta: string
+    secondaryCta: string
+    scroll: string
   }
   about: {
     title: string
-    description: string
-    bio: string
+    lead: string
+    values: {
+      performanceTitle: string
+      performanceText: string
+      architectureTitle: string
+      architectureText: string
+      collaborationTitle: string
+      collaborationText: string
+    }
+  }
+  services: {
+    title: string
+    subtitle: string
+  }
+  cases: {
+    title: string
+    subtitle: string
+    problem: string
+    action: string
+    result: string
   }
   experience: {
     title: string
+    seeAll: string
   }
   projects: {
     title: string
+    demo: string
     viewCode: string
-    live: string
+    viewMoreOnGithub: string
+  }
+  process: {
+    title: string
+    subtitle: string
   }
   skills: {
     title: string
@@ -38,10 +70,22 @@ export interface Translations {
   }
   contact: {
     title: string
+    intro: string
     email: string
     message: string
+    messageHint: string
     send: string
     or: string
+    emailSubject: string
+    sending: string
+    success: string
+    successFallback: string
+    invalidEmail: string
+    emptyMessage: string
+  }
+  meta: {
+    title: string
+    description: string
   }
   footer: {
     copyright: string
