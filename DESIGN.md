@@ -5,14 +5,13 @@ description: Monochrome dark-first editorial portfolio for a frontend developer.
 colors:
   primary: "#000000"
   on-primary: "#FFFFFF"
-  secondary: "#000000A6"
-  tertiary: "#FFFFFF"
+  muted-text: "#000000A6"
   neutral: "#FFFFFF"
   surface: "#F2F2F2"
   rule: "#0000002E"
   primary-dark: "#FFFFFF"
   on-primary-dark: "#000000"
-  secondary-dark: "#FFFFFFA6"
+  muted-text-dark: "#FFFFFFA6"
   neutral-dark: "#000000"
   surface-dark: "#0F0F0F"
   rule-dark: "#FFFFFF2E"
@@ -89,10 +88,10 @@ components:
     textColor: "{colors.primary-dark}"
     rounded: "{rounded.sm}"
   link:
-    textColor: "{colors.secondary}"
+    textColor: "{colors.muted-text}"
     typography: "{typography.body}"
   link-dark:
-    textColor: "{colors.secondary-dark}"
+    textColor: "{colors.muted-text-dark}"
     typography: "{typography.body}"
   page:
     backgroundColor: "{colors.neutral}"
@@ -112,7 +111,7 @@ A monochrome, dark-first portfolio for a frontend developer. Black is the page, 
 
 ## Colors
 
-Two colors only: black and white. The site ships with `class="dark"` on `<html>`; the `-dark` tokens are the source of truth for the rendered page and the light set is their exact inversion. Secondary text is white at 65% opacity, not a grey pigment, so the palette stays strictly monochrome. Rules are white at 18% opacity. A full-width inverted block (white background, black type) is the only accent device, used once per page for the contact section. Status colors from shadcn remain untouched for form errors; they are semantic, not decorative. No hue is used for emphasis, links or focus.
+Two colors only: black and white. The site ships with `class="dark"` on `<html>`; the `-dark` tokens are the source of truth for the rendered page and the light set is their exact inversion. Secondary text is white at 65% opacity, not a grey pigment, so the palette stays strictly monochrome; the token is `muted-text`, not shadcn's `--secondary`, which remains a surface color. Rules are white at 18% opacity. Semantic status colors stay at their shadcn values for form validation. A full-width inverted block (white background, black type) is the only accent device, used once per page for the contact section. Status colors from shadcn remain untouched for form errors; they are semantic, not decorative. No hue is used for emphasis, links or focus.
 
 ## Typography
 
@@ -147,7 +146,7 @@ Reuse the existing shadcn/base-ui primitives in `src/components/ui/`. `button` u
 
 ## Motion
 
-One orchestrated hero entrance: three semantic chunks staggered by 100ms, translateY 8px to 0 with opacity 0 to 1, easing `cubic-bezier(0.2, 0, 0, 1)`, duration 300ms. Everything else responds to interaction with opacity or color transitions of 150ms or less. Press feedback is `scale(0.96)`. Motion is wrapped in `@media (prefers-reduced-motion: no-preference)`; under reduced motion the hero uses opacity only.
+One orchestrated hero entrance: four semantic chunks staggered by 100ms (delays 0/100/200/300ms), translateY 8px to 0 with opacity 0 to 1, easing `cubic-bezier(0.2, 0, 0, 1)`, duration 300ms. Everything else responds to interaction with opacity or color transitions of 150ms or less. Press feedback is `scale(0.96)`. Motion is wrapped in `@media (prefers-reduced-motion: no-preference)`; under reduced motion the hero uses opacity only.
 
 ## Accessibility
 
