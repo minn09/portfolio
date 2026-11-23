@@ -11,64 +11,60 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "nozen",
-    title: "Nozen",
+    id: "daily-agenda",
+    title: "Daily Agenda",
     description:
-      "Para quien pierde el foco entre tareas dispersas: organiza el día y sus prioridades en un solo lugar.",
+      "Aplicación fullstack con App Router, estado global en Zustand y motor de búsqueda full-text. Zen Mode, atajos de teclado, temas claro/oscuro y exportación de datos. TypeScript estricto y Biome para mantener la calidad del código. Interfaz minimalista, responsive y con animaciones fluidas.",
     descriptionEn:
-      "For those who lose focus between scattered tasks: organizes the day and its priorities in one place.",
-    stack: ["React", "State Management"],
+      "Fullstack application with App Router, global state in Zustand, and a full-text search engine. Zen Mode, keyboard shortcuts, light/dark themes, and data export. Strict TypeScript and Biome to maintain code quality. Minimalist, responsive interface with fluid animations.",
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS 4",
+      "shadcn/ui",
+    ],
     featured: true,
     demo: "https://nozen-coral.vercel.app/",
-    github: "https://github.com/minn09/nozen",
   },
   {
     id: "subscription-manager",
     title: "Subscription Manager",
     description:
-      "Centraliza los gastos recurrentes que se te escapan: ves cuánto pagas cada mes en suscripciones y decides cuáles cancelar.",
+      "Aplicación para gestionar y rastrear suscripciones personales, con panel de control de gastos mensuales y anuales. La publicación del proyecto en LinkedIn superó las 22 mil impresiones.",
     descriptionEn:
-      "Centralizes the recurring expenses you overlook: see how much you pay monthly in subscriptions and decide what to cancel.",
-    stack: ["React", "Node.js", "Express"],
+      "Application to manage and track personal subscriptions, with a monthly and annual expense dashboard. The project's LinkedIn post surpassed 22 thousand impressions.",
+    stack: [
+      "TypeScript",
+      "React 19",
+      "Vite 7",
+      "Express 5",
+      "Drizzle ORM",
+      "PostgreSQL 17",
+      "Tailwind CSS 4",
+      "shadcn/ui",
+    ],
     featured: true,
-    // TODO: add the demo URL (deploy it or point to a staging build).
-    github: "https://github.com/minn09/subscription-manager",
-  },
-  {
-    id: "tiba",
-    title: "Tiba",
-    description:
-      "Convierte un hábito en algo que puedes ver: registras tu avance diario y detectas en qué días lo sostienes y en cuáles no.",
-    descriptionEn:
-      "Turns a habit into something you can see: you log your daily progress and spot the days you keep it and the ones you don't.",
-    stack: ["TypeScript", "Vite"],
-    featured: true,
-    // TODO: add the demo URL (deploy it or point to a staging build).
-    github: "https://github.com/minn09/tiba",
+    demo: "https://subscription-manager-minn09s-projects.vercel.app/subscriptions",
   },
   {
     id: "finance-pilot",
     title: "Finance Pilot",
     description:
-      "Dashboard de gestión financiera personal con control de flujos y divisas.",
+      "Aplicación de gestión de finanzas personales con panel de transacciones y resumen de gastos.",
     descriptionEn:
-      "Personal finance management dashboard with cash flow and currency control.",
-    stack: ["Next.js", "Shadcn", "TypeScript"],
-    featured: false,
-    // TODO: re-enable in the featured list when a demo URL exists.
-    github: "https://github.com/minn09/finance",
-  },
-  {
-    id: "lumie",
-    title: "Lumie",
-    description:
-      "Gestor de tareas y productividad con un enfoque en diseño minimalista.",
-    descriptionEn:
-      "Task and productivity manager with a minimalist design focus.",
-    stack: ["React", "Tailwind CSS"],
-    featured: false,
-    // TODO: re-enable in the featured list when a demo URL exists.
-    github: "https://github.com/minn09/lumie",
+      "Personal finance management application with a transaction panel and expense summary.",
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Zustand 5",
+      "Tailwind CSS 4",
+      "shadcn/ui",
+    ],
+    featured: true,
+    demo: "https://finance-vert-seven.vercel.app/",
   },
 ]
 
