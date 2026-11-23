@@ -41,7 +41,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
   <body class="min-h-screen bg-background antialiased">
     <a
       href="#main"
-      class="focus-visible:clip-path-none sr-only fixed top-0 left-0 z-[60] bg-background px-4 py-2 text-foreground focus-visible:m-0 focus-visible:h-auto focus-visible:w-auto focus-visible:overflow-visible focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+      class="fixed top-0 left-0 z-[60] h-px w-px overflow-hidden bg-background text-foreground [clip-path:inset(50%)] focus-visible:h-auto focus-visible:w-auto focus-visible:overflow-visible focus-visible:px-4 focus-visible:py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring focus-visible:[clip-path:none]"
     >
       Skip to content
     </a>
