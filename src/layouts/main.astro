@@ -17,7 +17,7 @@ const { title = t.meta.title, description = t.meta.description } = Astro.props
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
 ---
 
-<html lang={locale}>
+<html lang={locale} class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -39,8 +39,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     <meta name="twitter:description" content={description} />
   </head>
   <body class="min-h-screen bg-background antialiased">
+    <a
+      href="#main"
+      class="fixed top-0 left-0 z-[60] h-px w-px overflow-hidden bg-background text-foreground [clip-path:inset(50%)] focus-visible:h-auto focus-visible:w-auto focus-visible:overflow-visible focus-visible:px-4 focus-visible:py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring focus-visible:[clip-path:none]"
+    >
+      Skip to content
+    </a>
     <Navbar locale={locale} />
-    <main>
+    <main id="main">
       <slot />
     </main>
     <Footer locale={locale} />

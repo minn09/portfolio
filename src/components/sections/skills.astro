@@ -1,7 +1,6 @@
 ---
 import { skills } from "@/data/skills"
 import { getTranslations, type Locale } from "@/i18n"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface Props {
   locale: Locale
@@ -11,75 +10,77 @@ const { locale } = Astro.props
 const t = getTranslations(locale)
 ---
 
-<section id="skills" class="bg-muted/30 py-16">
-  <div class="mx-auto max-w-4xl px-6">
-    <div class="mb-10 text-center md:text-left">
-      <h2 class="text-3xl font-bold tracking-tight">{t.skills.title}</h2>
-      <p class="mt-2 text-sm text-muted-foreground">
+<section id="skills" class="py-16 lg:py-24">
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-10">
+    <div class="mb-12">
+      <h2 class="text-3xl font-semibold tracking-[-0.03em] lg:text-[3rem]">
+        {t.skills.title}
+      </h2>
+      <p class="measure mt-4 text-sm text-muted-foreground">
         Tecnologías y herramientas que utilizo habitualmente en el desarrollo.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <div class="grid grid-cols-1 md:grid-cols-3">
       <!-- Frontend -->
-      <Card className="transition-all hover:border-foreground/20">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg font-semibold"
-            >{t.skills.frontend}</CardTitle
-          >
-        </CardHeader>
-        <CardContent>
-          <div class="flex flex-wrap gap-2">
-            {
-              skills.frontend.map((skill) => (
-                <span class="cursor-default rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground transition-all hover:bg-foreground hover:text-background">
-                  {skill}
-                </span>
-              ))
-            }
-          </div>
-        </CardContent>
-      </Card>
+      <div>
+        <div class="rule mb-6 md:hidden" aria-hidden="true"></div>
+        <h3 class="text-sm font-semibold text-foreground">
+          {t.skills.frontend}
+        </h3>
+        <ul class="mt-4 flex flex-wrap text-sm text-muted-foreground">
+          {
+            skills.frontend.map((skill, index) => (
+              <li class="cursor-default">
+                {skill}
+                {index < skills.frontend.length - 1 && (
+                  <span aria-hidden="true">{" / "}</span>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
 
       <!-- Backend -->
-      <Card className="transition-all hover:border-foreground/20">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg font-semibold"
-            >{t.skills.backend}</CardTitle
-          >
-        </CardHeader>
-        <CardContent>
-          <div class="flex flex-wrap gap-2">
-            {
-              skills.backend.map((skill) => (
-                <span class="cursor-default rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground transition-all hover:bg-foreground hover:text-background">
-                  {skill}
-                </span>
-              ))
-            }
-          </div>
-        </CardContent>
-      </Card>
+      <div class="md:border-l md:border-border md:pl-8">
+        <div class="rule mb-6 md:hidden" aria-hidden="true"></div>
+        <h3 class="text-sm font-semibold text-foreground">
+          {t.skills.backend}
+        </h3>
+        <ul class="mt-4 flex flex-wrap text-sm text-muted-foreground">
+          {
+            skills.backend.map((skill, index) => (
+              <li class="cursor-default">
+                {skill}
+                {index < skills.backend.length - 1 && (
+                  <span aria-hidden="true">{" / "}</span>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
 
       <!-- Tools -->
-      <Card className="transition-all hover:border-foreground/20">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg font-semibold"
-            >{t.skills.tools}</CardTitle
-          >
-        </CardHeader>
-        <CardContent>
-          <div class="flex flex-wrap gap-2">
-            {
-              skills.tools.map((skill) => (
-                <span class="cursor-default rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground transition-all hover:bg-foreground hover:text-background">
-                  {skill}
-                </span>
-              ))
-            }
-          </div>
-        </CardContent>
-      </Card>
+      <div class="md:border-l md:border-border md:pl-8">
+        <div class="rule mb-6 md:hidden" aria-hidden="true"></div>
+        <h3 class="text-sm font-semibold text-foreground">
+          {t.skills.tools}
+        </h3>
+        <ul class="mt-4 flex flex-wrap text-sm text-muted-foreground">
+          {
+            skills.tools.map((skill, index) => (
+              <li class="cursor-default">
+                {skill}
+                {index < skills.tools.length - 1 && (
+                  <span aria-hidden="true">{" / "}</span>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   </div>
 </section>
