@@ -1,14 +1,6 @@
 ---
 import { caseStudies } from "@/data/cases"
 import { getTranslations, type Locale } from "@/i18n"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 
 interface Props {
   locale: Locale
@@ -16,54 +8,71 @@ interface Props {
 
 const { locale } = Astro.props
 const t = getTranslations(locale)
+
+const metricByCase: Record<string, string> = {
+  "react-performance":
+    locale === "en" ? "about 5 s to about 2 s" : "unos 5 s a unos 2 s",
+  "catalog-platform":
+    locale === "en" ? "The 4 sales employees" : "Los 4 empleados de ventas",
+}
 ---
 
-<section id="cases" class="py-10">
-  <div class="mx-auto max-w-4xl px-6">
-    <h2 class="mb-2 text-2xl font-semibold">{t.cases.title}</h2>
-    <p class="mb-8 max-w-2xl text-muted-foreground">{t.cases.subtitle}</p>
+<section id="cases" class="py-16 lg:py-24">
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-10">
+    <div class="mb-12">
+      <h2 class="text-3xl font-semibold tracking-[-0.03em] lg:text-[3rem]">
+        {t.cases.title}
+      </h2>
+      <p class="measure mt-4 text-muted-foreground">{t.cases.subtitle}</p>
+    </div>
 
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div class="space-y-16">
       {
         caseStudies.map((study) => (
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">
-                {locale === "en" ? study.titleEn : study.title}
-              </CardTitle>
-              <CardDescription>
-                {locale === "en" ? study.contextEn : study.context}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div class="mb-4 flex flex-wrap gap-2">
-                {study.stack.map((tech) => (
-                  <Badge variant="secondary">{tech}</Badge>
-                ))}
+          <article>
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <h3 class="text-xl font-semibold text-foreground lg:text-2xl">
+                  {locale === "en" ? study.titleEn : study.title}
+                </h3>
+                <p class="mt-2 text-sm text-muted-foreground">
+                  {locale === "en" ? study.contextEn : study.context}
+                </p>
               </div>
+              <p class="tabular text-4xl font-semibold text-foreground lg:text-5xl">
+                {metricByCase[study.id]}
+              </p>
+            </div>
 
-              <dl class="space-y-4 text-sm">
-                <div>
-                  <dt class="font-medium">{t.cases.problem}</dt>
-                  <dd class="mt-1 text-muted-foreground">
-                    {locale === "en" ? study.problemEn : study.problem}
-                  </dd>
-                </div>
-                <div>
-                  <dt class="font-medium">{t.cases.action}</dt>
-                  <dd class="mt-1 text-muted-foreground">
-                    {locale === "en" ? study.actionEn : study.action}
-                  </dd>
-                </div>
-                <div>
-                  <dt class="font-medium">{t.cases.result}</dt>
-                  <dd class="mt-1 font-medium text-foreground">
-                    {locale === "en" ? study.resultEn : study.result}
-                  </dd>
-                </div>
-              </dl>
-            </CardContent>
-          </Card>
+            <dl class="mt-8">
+              <div class="rule py-6">
+                <dt class="text-xs text-muted-foreground">{t.cases.problem}</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-foreground/90">
+                  {locale === "en" ? study.problemEn : study.problem}
+                </dd>
+              </div>
+              <div class="rule py-6">
+                <dt class="text-xs text-muted-foreground">{t.cases.action}</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-foreground/90">
+                  {locale === "en" ? study.actionEn : study.action}
+                </dd>
+              </div>
+              <div class="rule py-6">
+                <dt class="text-xs text-muted-foreground">{t.cases.result}</dt>
+                <dd class="mt-2 text-sm leading-relaxed text-foreground/90">
+                  {locale === "en" ? study.resultEn : study.result}
+                </dd>
+              </div>
+            </dl>
+
+            <ul class="mt-6 flex flex-wrap gap-2">
+              {study.stack.map((tech) => (
+                <li class="rounded-sm border border-border px-2 py-1 text-xs text-muted-foreground">
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </article>
         ))
       }
     </div>
