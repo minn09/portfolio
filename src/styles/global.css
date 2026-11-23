@@ -70,7 +70,7 @@
   --ring: #000000;
   --surface: #f2f2f2;
   --rule: #0000002e;
-  --destructive: #000000;
+  --destructive: oklch(0.577 0.245 27.325);
   --chart-1: #000000;
   --chart-2: #000000a6;
   --chart-3: #000000;
@@ -107,7 +107,7 @@
   --ring: #ffffff;
   --surface: #0f0f0f;
   --rule: #ffffff2e;
-  --destructive: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
   --chart-1: #ffffff;
   --chart-2: #ffffffa6;
   --chart-3: #ffffff;
@@ -153,11 +153,7 @@
 .inverted {
   background-color: var(--foreground);
   color: var(--background);
-}
-
-.index-rail {
-  position: sticky;
-  top: 96px;
+  --ring: var(--background);
 }
 
 .index-link {
@@ -200,6 +196,11 @@
 
   .hero-reveal [data-reveal="3"] {
     animation-delay: 300ms;
+  }
+
+  button:active,
+  a:active {
+    scale: 0.96;
   }
 }
 
